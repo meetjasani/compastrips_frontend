@@ -1,0 +1,7755 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans CJK KR' !important;
+  overflow-x: hidden;
+  user-select: none !important;
+}
+
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  src: url("../src/font/NotoSansCJKkr-Regular.otf");
+  font-style: normal;
+}
+
+.ninetwenty-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: auto;
+}
+
+
+
+.mini-container {
+  max-width: 1100px;
+  width: auto;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin-bottom: 0 !important;
+}
+
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #fff;
+  border-radius: 10px;
+  border: 1px solid #B1B1B1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+.layout-section {
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  /* max-width: 1920px; */
+  margin: 0 auto;
+}
+
+.header-and-content {
+  padding-bottom: 200px;
+}
+
+/* ====Start header ==== */
+
+.user-image-login {
+  width: 26px;
+  height: 26px;
+  border-radius: 50% !important;
+}
+
+.user-name-login {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration-line: underline;
+  color: #1B1C1E;
+  width: 58px;
+  height: 16px;
+  line-height: 16px;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-align: start;
+  /* margin-right: 14px; */
+}
+
+.logout-header {
+  background: rgba(64, 45, 37, 0.34);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  max-width: 100%;
+}
+
+.logout-color-header {
+  background: #fff;
+  backdrop-filter: blur(0px);
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 99;
+  top: 0;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-header-inner {
+  height: 70px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logout-header-inner .login-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 13px;
+}
+
+.logout-header-inner .login-btn .profile-drop,
+.logout-header-inner .login-color-btn .profile-drop {
+  width: 58px;
+  margin-left: 8px;
+  border-radius: 0px;
+}
+
+.logout-header-inner .right-button {
+  max-width: 237px;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+}
+
+.logout-header-inner .login-btn .profilenote-btn {
+  border-radius: 0px;
+}
+
+
+
+.logout-header-inner .login-color-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 13px;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-toggle,
+.logout-header-inner .login-color-btn .dropdown .dropdown-toggle {
+  align-items: center;
+  border: none;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-toggle::after,
+.logout-header-inner .login-color-btn .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu {
+  transform: translate(-27px, 52px) !important;
+  width: 240px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 20px 0px 20px 0px;
+}
+
+.logout-header-inner .login-btn .dropdown .note-dropmenu,
+.logout-header-inner .login-color-btn .dropdown .note-dropmenu {
+  transform: translate(-1px, 52px) !important;
+}
+
+.login-btn .dropdown .note-dropmenu .dropdown-item:hover,
+.login-color-btn .dropdown .note-dropmenu .dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.logout-header-inner .login-btn .dropdown .note-dropmenu p:hover,
+.logout-header-inner .login-color-btn .dropdown .note-dropmenu p:hover {
+  font-weight: 700 !important;
+}
+
+.logout-header-inner .login-btn .dropdown .note-dropmenu .dropdown-item:active,
+.logout-header-inner .login-color-btn .dropdown .note-dropmenu .dropdown-item:active {
+  background: #ffffff;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .chatbox,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .chatbox {
+  padding: 16px 19px 16px 21px;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .chatbox .ChatBoxInner,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .chatbox .ChatBoxInner {
+  height: 18px;
+  line-height: 18px;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .chatbox,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .chatbox {
+  align-items: center;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .chatbox p,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .chatbox p {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1B1C1E;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .eact-switch-bg,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .eact-switch-bg {
+  background: #E7E7E7;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .chatbox .on-off,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .chatbox .on-off {
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 28px;
+  color: #42B6E6;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .dropdown-item,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .dropdown-item {
+  padding: 16px 19px 16px 21px;
+  display: block;
+  width: 100%;
+}
+
+.logout-header-inner .login-btn .notification .dropdown-item,
+.logout-header-inner .login-btn .notification .dropdown-item {
+  padding: 5px 19px 5px 19px !important;
+}
+
+.logout-header-inner .login-btn .notification {
+  /* padding: 0 !important; */
+}
+
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .dropdown-item a,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .dropdown-item a {
+  color: #1B1C1E;
+  font-weight: 400;
+  font-size: 12px;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  height: 16px;
+  line-height: 16px;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .dropdown-item:active,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .dropdown-item:active {
+  background: #FAFAFA;
+  font-weight: 700;
+  color: #1B1C1E;
+  font-size: 12px;
+  outline: none;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .dropdown-item.active,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .dropdown-item.active {
+  background: #FAFAFA;
+}
+
+.logout-header-inner .login-btn .dropdown .dropdown-menu .dropdown-item.active .profile-drop-link-normal.active,
+.logout-header-inner .login-color-btn .dropdown .dropdown-menu .dropdown-item.active .profile-drop-link-normal.active {
+  background: #FAFAFA;
+  font-weight: 700;
+  color: #1B1C1E;
+  font-style: normal;
+}
+
+/* .logout-header-inner .login-btn .dropdown .dropdown-menu .dropdown-item:hover {
+  background: #FAFAFA;
+  font-weight: bold;
+  color: #1B1C1E;
+} */
+
+.right-button .login-btn button {
+  width: 92px;
+  height: 38px;
+  /* line-height: 38px; */
+  border: 1px solid #FFFFFF;
+  border-radius: 133.333px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  background: transparent !important;
+  cursor: pointer;
+  z-index: 999;
+  padding: 0px;
+}
+
+.right-button .login-color-btn button {
+  width: auto;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #EBEBEB;
+  border-radius: 133.333px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1B1C1E;
+  background: transparent !important;
+  cursor: pointer;
+  /* margin-right: 14px; */
+  z-index: 111;
+  padding: 0px;
+}
+
+.change-language {
+  border: 1px solid #fff;
+  border-radius: 133.33px;
+  position: relative;
+}
+
+.change-color-language {
+  border: 1px solid #EDFAFF;
+  background: #EDFAFF;
+  border-radius: 133.33px;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.change-language .css-1s2u09g-control,
+.change-language .css-1pahdxg-control {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.change-color-language .css-1s2u09g-control,
+.change-color-language .css-1pahdxg-control {
+  background-color: #EDFAFF !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: #EDFAFF !important;
+}
+
+
+.change-language .css-1okebmr-indicatorSeparator {
+  display: none !important;
+}
+
+.change-color-language .css-1okebmr-indicatorSeparator {
+  display: none !important;
+}
+
+.change-language .css-tj5bde-Svg {
+  display: none;
+}
+
+.change-color-language .css-tj5bde-Svg {
+  display: none;
+}
+
+.change-language .world-image {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  z-index: -1;
+}
+
+.change-color-language .world-image {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+
+}
+
+.change-language .dropdown-image {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  z-index: -1;
+}
+
+.change-color-language .dropdown-image {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+
+}
+
+.change-language .css-g1d714-ValueContainer {
+  padding: 0 !important;
+  height: 100%;
+}
+
+.change-language .css-g1d714-ValueContainer .css-1uccc91-singleValue {
+  transform: translateY(-50%);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 16px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.change-color-language .css-g1d714-ValueContainer {
+  padding: 0 !important;
+}
+
+.change-language .css-b8ldur-Input,
+.change-language .css-1uccc91-singleValue {
+  margin: 0 !important;
+  color: #fff !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 !important;
+  width: 60px !important;
+  text-align: center;
+}
+
+.change-color-language .css-b8ldur-Input,
+.change-color-language .css-1uccc91-singleValue {
+  margin: 0 !important;
+  color: #42B6E6 !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 !important;
+  width: 60px !important;
+  text-align: center;
+}
+
+.change-language .css-tlfecz-indicatorContainer,
+.change-language .css-1hb7zxy-IndicatorsContainer {
+  display: none !important;
+}
+
+.change-color-language .css-tlfecz-indicatorContainer,
+.change-color-language .css-1hb7zxy-IndicatorsContainer {
+  display: none !important;
+}
+
+.login-btn .show .dropdown-item .notification-font-bold,
+.login-color-btn .show .dropdown-item .notification-font-bold {
+  font-size: 11px;
+  height: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 10px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.login-color-btn .show .dropdown-item .notification-font-normal,
+.login-btn .show .dropdown-item .notification-font-normal {
+  font-size: 11px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 10px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0 !important;
+}
+
+.login-btn .show .dropdown-item .notification-font-bold:last-child,
+.login-color-btn .show .dropdown-item .notification-font-bold:last-child {
+  margin-bottom: 0px !important;
+}
+
+.login-btn .profilenote-btn .note-badge {
+  top: 0px;
+  background-color: #FF5F5F;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+}
+
+.login-color-btn .profilenote-btn .note-badge {
+  background-color: #FF5F5F;
+  width: 8px;
+  height: 8px;
+  top: 6px;
+  display: block;
+  border-radius: 50%;
+}
+
+/* ====End header ==== */
+
+/* ==== Start Modal ==== */
+
+.login-modal,
+.forgot-modal,
+.signup-modal,
+.welcome-modal,
+.terms-modal {
+  max-width: 460px !important;
+
+}
+
+.login-modal .modal-content,
+.forgot-modal .modal-content,
+.signup-modal .modal-content,
+.welcome-modal .modal-content,
+.terms-modal .modal-content {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  border: none !important;
+}
+
+.login-modal-inner,
+.forgot-modal-inner,
+.signup-modal-inner {
+  padding: 50px 30px;
+}
+
+.welcome-modal-inner {
+  padding: 50px 40px;
+}
+
+.terms-modal-inner {
+  padding: 50px 40px 51px 40px;
+}
+
+.login-modal .custom-modal-header h5,
+.forgot-modal .custom-modal-header h5,
+.signup-modal .custom-modal-header h5,
+.welcome-modal .custom-modal-header h5,
+.terms-modal .custom-modal-header h5 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #1B1C1E;
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
+}
+
+.login-modal .modal-close-button,
+.forgot-modal .modal-close-button,
+.signup-modal .modal-close-button {
+  position: absolute;
+  top: 52px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.forgot-modal-content .single-input {
+  margin-top: 30px;
+
+}
+
+.login-modal-content .single-input,
+.signup-modal-content .single-input {
+  margin-top: 40px;
+}
+
+.login-modal-content .single-input:first-child,
+.signup-modal-content .single-input:first-child {
+  margin-top: 30px !important;
+}
+
+.login-modal-content .single-input label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.forgot-modal-content .single-input label,
+.signup-modal-content .single-input label {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  color: #1B1C1E;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.login-modal-content .single-input input,
+.forgot-modal-content .single-input input,
+.signup-modal-content .single-input input {
+  height: 56px;
+  width: 100%;
+  margin-top: 20px;
+  background: #FAFAFA;
+  border: 1px solid #DCDCDC;
+  border-radius: 50px;
+  color: #1B1C1E;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 20px;
+  outline: none !important;
+}
+
+.signup-modal-content .single-input input {
+  background: #fff !important;
+}
+
+.login-modal-content .single-input input::placeholder,
+.forgot-modal-content .single-input input::placeholder,
+.signup-modal-content .single-input input::placeholder {
+  color: #7E7E7E;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.signup-modal-inner .signup-modal-content .css-4ljt47-MenuList {
+  overflow-x: hidden;
+}
+
+.signup-modal-inner .signup-modal-content .css-14el2xx-placeholder {
+  height: 56px;
+  line-height: 56px;
+  position: absolute;
+  top: 0px;
+  font-size: 14px;
+}
+
+.signup-modal-inner .signup-modal-content .css-qc6sy-singleValue {
+  top: 0px;
+  height: 56px;
+  line-height: 56px;
+  position: absolute;
+}
+
+.login-modal-content .password-input input::placeholder {
+  color: #7E7E7E;
+  font-size: 13px !important;
+}
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background: #FFFFFF;
+  border: 1px solid #B1B1B1;
+  border-radius: 20px;
+}
+
+.container-checkbox:hover input~.checkmark {
+  background-color: #fff;
+}
+
+.container-checkbox input:checked~.checkmark {
+  background-color: #42B6E6;
+  border: 1px solid #42B6E6;
+
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+.container-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.login-radio-row {
+  padding-left: 7px;
+  padding-right: 8px;
+  margin-top: 30px;
+}
+
+.login-forgot-password {
+  margin-top: 30px;
+}
+
+.login-forgot-password button {
+  background: transparent;
+  height: 18px;
+  color: #42B6E6;
+  border: none !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.login-btn-modal,
+.forgot-btn-modal,
+.forgot-modal .forgot-btn {
+  margin-top: 50px;
+}
+
+.forgot-modal .forgot-btn button {
+  width: 100%;
+  height: 60px;
+  background: #E7E7E7;
+  border-radius: 40px;
+  border: none;
+  color: #ffffff;
+}
+
+
+.date-of-birth .css-yk16xz-control,
+.date-of-birth .css-1pahdxg-control {
+  width: 126px;
+}
+
+.phone-verify .css-yk16xz-control,
+.phone-verify .css-1pahdxg-control {
+  width: 126px;
+}
+
+.signup-btn-modal {
+  margin-top: 44px;
+}
+
+.login-btn-modal button,
+.forgot-btn-modal button,
+.signup-btn-modal button,
+.welcome-btn-modal button {
+  background: #42B6E6;
+  border-radius: 40px;
+  height: 60px;
+  border: none !important;
+  width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.have-account-row {
+  margin-top: 39px;
+}
+
+.have-account-row p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  text-align: center;
+  height: 18px;
+  line-height: 18px;
+}
+
+.have-account-row p span {
+  color: #42B6E6 !important;
+}
+
+.login-form-error,
+.forgot-form-error,
+.signup-form-error {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #CE0000;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+}
+
+.text-forgot-password {
+  max-width: 380px;
+  margin: 0 auto;
+  background: #f8f8f8;
+  padding: 40px 30px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.text-forgot-password p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #7E7E7E;
+  letter-spacing: 0.5px !important;
+}
+
+.forgot-Sucessfull-label {
+  margin-top: 20px;
+}
+
+.forgot-Sucessfull-label label {
+  background: #E7E7E7;
+  border-radius: 40px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #7E7E7E;
+  font-family: 'Roboto', sans-serif !important;
+
+}
+
+.two-inputs input {
+  width: 194px !important;
+}
+
+.password-two-error {
+  bottom: -35px !important;
+}
+
+
+.dropdown-signup .css-2b097c-container {
+  margin-top: 20px;
+}
+
+.dropdown-signup .css-1s2u09g-control,
+.dropdown-signup .css-1pahdxg-control {
+  border: 1px solid #DCDCDC !important;
+  height: 56px !important;
+  border-radius: 50px !important;
+  margin-top: 25px;
+}
+
+.dropdown-signup .css-319lph-ValueContainer,
+.dropdown-signup .css-6j8wv5-Input {
+  height: 56px;
+  padding: 0 0px 0 20px !important;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+.dropdown-signup .css-1okebmr-indicatorSeparator {
+  display: none !important;
+}
+
+.css-tlfecz-indicatorContainer,
+.css-1gtu0rj-indicatorContainer {
+  padding: 0 20px 0 0 !important;
+}
+
+.dropdown-signup .css-b8ldur-Input input {
+  display: none !important;
+}
+
+
+
+
+.dropdown-signup .css-6j8wv5-Input input {
+  display: none !important;
+}
+
+.date-of-birth .css-1s2u09g-control {
+  width: 126px;
+}
+
+.phone-verify .css-1s2u09g-control {
+  width: 126px;
+}
+
+.phone-verify .css-3iigni-container {
+  margin-top: 20px;
+}
+
+.phone-verify .css-1insrsq-control {
+  width: 126px;
+  height: 56px;
+  background: transparent;
+  border: 1px solid #C9C9C9;
+  border-radius: 100px;
+}
+
+.phone-verify .css-1insrsq-control .css-jzldcf-Input {
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.phone-verify .input-verify {
+  width: 262px !important;
+}
+
+.phone-verify button {
+  position: absolute;
+  top: 32px;
+  right: 8px;
+  background: #42B6E6;
+  border-radius: 25px;
+  width: 95px;
+  height: 38px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #FFFFFF;
+  border: none !important;
+}
+
+.login-form-error-right {
+  color: #42B6E6 !important;
+}
+
+.single-input .v-code {
+  margin-top: 10px !important;
+}
+
+.accept-term-condition {
+  margin-top: 37px;
+}
+
+.signup-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px
+}
+
+.signup-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.signup-checkbox .checkmark {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  background: #666666;
+  border: none !important;
+  border-radius: 20px;
+}
+
+.signup-checkbox:hover input~.checkmark {
+  background-color: #42B6E6;
+}
+
+.signup-checkbox input:checked~.checkmark {
+  background-color: #42B6E6;
+}
+
+.signup-checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+.signup-checkbox .checkmark:after {
+  left: 14px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 11px;
+  display: block !important;
+  height: 20px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.tearms-content p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #666666;
+  height: 18px;
+  line-height: 18px;
+  margin-left: 22px;
+  max-width: 266px;
+}
+
+.accept-term-condition .more-btn button,
+.accept-condition .more-btn button {
+  color: #42B6E6;
+  background: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.divider-signup {
+  height: 1px;
+  background: #C9C9C9;
+  width: 100%;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+.accept-condition {
+  margin-top: 23px;
+}
+
+.accept-condition p {
+  height: 44px !important;
+  line-height: 22px !important;
+}
+
+.text-welcome-password {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+
+}
+
+.text-welcome-password h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #404040;
+  height: 20px;
+  line-height: 20px;
+}
+
+.text-welcome-password p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  margin-top: 20px;
+  line-height: 28px;
+}
+
+.tearms-inner-content {
+  height: 450px;
+  padding: 30px 20px;
+  overflow-y: auto;
+  border: 1px solid #7E7E7E;
+  margin-top: 30px;
+}
+
+.tearms-inner-content h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #404040;
+  font-family: 'Poppins', sans-serif;
+  height: 24px;
+  line-height: 24px;
+}
+
+.tearms-inner-content p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #404040;
+  margin-top: 16px;
+}
+
+.tearms-Button button {
+  margin-top: 51px;
+  border-radius: 143.697px;
+  border: 2px solid #42B6E6;
+  background: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #42B6E6;
+  font-family: 'Roboto', sans-serif !important;
+  width: 100%;
+  height: 60px;
+}
+
+/* ==== End Login Modal ==== */
+
+/* ==== Start hero section ==== */
+
+.hero-section {
+  background-image: url("./img/hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 642px;
+  position: relative;
+}
+
+.hero-content {
+  padding-top: 170px;
+  position: relative;
+}
+
+.hero-content h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 56px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.55);
+}
+
+.shadow-image {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.hero-content:nth-child(2) {
+  margin-top: 20px !important;
+}
+
+.search-bar {
+  margin-top: 50px;
+  max-width: 748px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  height: 70px;
+  /* line-height: 70px; */
+}
+
+.search-bar-inner {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  /* line-height: 70px; */
+}
+
+.find-city-location {
+  position: relative;
+  height: 16px;
+  line-height: 16px;
+}
+
+.find-city-location input {
+  border: none;
+  background: none !important;
+  padding-left: 54px;
+  padding-right: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  width: 204px;
+  height: 16px;
+  outline: none !important;
+  border-right: 1px solid #EBEBEB;
+}
+
+.find-city-location input::placeholder {
+  color: #B7B7B7;
+}
+
+.find-city-location .location-icon {
+  position: absolute;
+  top: 0px;
+  left: 28px;
+}
+
+.from-calender {
+  padding-left: 20px;
+  width: 212px;
+  height: 16px;
+  line-height: 16px;
+  border-right: 1px solid #EBEBEB;
+}
+
+.to-calender {
+  padding-left: 20px;
+  width: 210px;
+}
+
+.from-calender .react-datepicker__input-container input,
+.to-calender .react-datepicker__input-container input {
+  height: 16px;
+  line-height: 16px;
+  width: 90px;
+  border: none !important;
+  margin-left: 12px;
+  background: transparent !important;
+  outline: none !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+}
+
+.from-calender h6,
+.to-calender h6 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B7B7B7;
+  width: 52px;
+  height: 16px;
+  line-height: 16px;
+  white-space: nowrap;
+  margin-right: 23px !important;
+}
+
+.from-calender .calender-image,
+.to-calender .calender-image {
+  /* margin-left: 20px; */
+  cursor: pointer;
+}
+
+.search-button-hero {
+  border: none !important;
+  background: #42B6E6 !important;
+  border-radius: 100px;
+  width: 112px;
+  height: 56px;
+  font-style: normal;
+  line-height: 56px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button-hero img {
+  margin-right: 10px;
+}
+
+.second-title-row {
+  margin-top: 20px !important;
+}
+
+.hero-content-btn {
+  margin-top: 54px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content-btn button {
+  border: none !important;
+}
+
+.hero-content-btn .view-host-btn,
+.hero-content-btn .host-my-own {
+  width: 172px;
+  height: 50px;
+  border: 1px solid #FFFFFF !important;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.2) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content-btn .view-host-btn {
+  margin-right: 15px;
+}
+
+.hero-content-btn .host-my-own {
+  margin-left: 15px;
+}
+
+.hero-content-btn .view-host-btn span,
+.hero-content-btn .host-my-own span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+  height: 18px;
+  margin-left: 9px;
+  line-height: 18px;
+}
+
+.bg-content {
+  background-color: #fafafa;
+  padding-top: 42px;
+  padding-bottom: 90px;
+}
+
+/* ==== End hero section ==== */
+
+/* ==== Start Treding section ==== */
+
+.trending-now-section,
+.popular-host-section {
+  background: #FFFFFF;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  width: 264px;
+  padding-bottom: 35px;
+}
+
+.popular-host-section {
+  margin-top: 20px;
+}
+
+.trending-now-section .heading,
+.popular-host-section .heading {
+  padding: 30px 15px 20px 15px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.trending-now-section .heading h4,
+.popular-host-section .heading h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  height: 22px;
+  line-height: 22px;
+  color: #1B1C1E;
+}
+
+.trending-number h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  height: 20px;
+  line-height: 20px;
+  width: 30px;
+}
+
+.trending-pro-content {
+  margin-left: 14px;
+}
+
+.trending-pro-content h5,
+.popular-pro-content h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  letter-spacing: -0.3px;
+  width: 190px;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 18px;
+  line-height: 18px;
+}
+
+.popular-pro-content h5 {
+  width: 140px !important;
+}
+
+.trending-pro-content h6,
+.popular-pro-content h6 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  letter-spacing: -0.3px;
+  margin-top: 10px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.single-trending-row {
+  margin-top: 20px;
+  padding-left: 15px;
+}
+
+.popular-host-row {
+  padding: 0 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.popular-host-img img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.popular-pro-content {
+  margin-left: 33px;
+}
+
+.popular-host-flag img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ==== End Treding section ==== */
+
+/* ==== Start Tour section ==== */
+
+.tour-list-section {
+  width: 814px;
+}
+
+.tab-ul-class {
+  margin-bottom: 0 !important;
+}
+
+.tab-li-class {
+  list-style: none;
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #EBEBEB;
+}
+
+.tab-li-class .tab-card {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  width: 163px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-li-class .tab-card-active {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #009DDE;
+  width: 163px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-li-class .tab-card-active:after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  content: '';
+  display: block;
+  bottom: -22px;
+  background-color: #009DDE;
+}
+
+
+
+.single-card-tour {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  display: flex;
+  margin-top: 16px;
+  position: relative;
+}
+
+.content-card-tout-list .single-card-tour:first-child {
+  margin-top: 30px !important;
+}
+
+.bg-image-tour {
+  width: 234px;
+  min-width: 234px;
+  height: 234px;
+  border-radius: 20px 0 0 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wishlistimg {
+  width: 260px;
+  height: 260px;
+  border-radius: 20px 0 0 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.single-card-tour-inner {
+  padding: 18px 20px 20px 18px;
+  width: 100%;
+}
+
+.single-card-tour-inner .title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.single-card-tour-inner .title-row h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #1B1C1E;
+  height: 24px;
+  line-height: 24px;
+  width: 372px;
+  min-width: 372px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.single-card-tour-inner .title-row h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #404040;
+  height: 18px;
+  line-height: 18px;
+}
+
+.single-card-tour-inner .title-row a {
+  text-decoration: none !important;
+}
+
+.compastrips-span {
+  color: #42B6E6 !important;
+}
+
+.single-card-tour-inner .location-row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.single-card-tour-inner .location-row p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  margin-left: 10px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.tour-star-list {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  height: 16px;
+}
+
+.tour-star-list .tour-rating {
+  height: 16px;
+  line-height: 13px;
+}
+
+.tour-star-list .tour-rating img {
+  margin-right: 6px;
+}
+
+.total-rating-content {
+  margin-left: 2px;
+}
+
+.total-rating-content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  height: 16px;
+  line-height: 16px;
+}
+
+.route-setting {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 70px;
+  overflow: hidden;
+}
+
+.route-setting p {
+  min-width: 90px;
+  max-width: 170px;
+  border-radius: 29px;
+  height: 30px !important;
+  line-height: 28px;
+  background: #FFFFFF;
+  border: 1px solid #EBEBEB;
+  padding: 0px 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  letter-spacing: -0.3px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.route-setting p .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 1;
+
+}
+
+.route-setting p:hover .tooltiptext {
+  visibility: visible;
+  margin-left: 20px;
+}
+
+.date-with-host {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.date-tour-card {
+  display: flex;
+  align-items: center;
+}
+
+.date-tour-card h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #7E7E7E;
+}
+
+.tout-total-host h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1B1C1E;
+  height: 16px;
+  line-height: 16px;
+}
+
+.tout-total-host h6 span {
+  color: #42B6E6 !important;
+}
+
+/* ==== End Tour section ==== */
+
+/* ==== Start Event section ==== */
+
+.event-info-page {
+  padding-top: 147px;
+  padding-bottom: 146px;
+}
+
+.main-images img {
+  width: 732px;
+  height: 440px;
+  border-radius: 20px 0 0 20px;
+}
+
+.main-images .itinerary-viewAll-btn {
+  position: absolute;
+  width: 160px;
+  height: 36px;
+  right: 32.71px;
+  bottom: 32.71px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 29px;
+  border: none;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+
+.small-main-images img:nth-child(2) {
+  border-radius: 0 20px 0 0;
+}
+
+.small-main-images img:nth-child(3) {
+  margin-bottom: 0 !important;
+}
+
+.small-main-images img:nth-child(4) {
+  border-radius: 0 0 20px 0;
+  margin-bottom: 0 !important;
+}
+
+.small-main-images img {
+  width: 176px;
+  height: 216px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+/* .title-single-event {
+  margin-top: 40px;
+} */
+
+.event-info-main-inner {
+  margin-top: 40px;
+}
+
+.title-single-event h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #1B1C1E;
+  height: 34px;
+  line-height: 34px;
+}
+
+.location-single-event {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.location-single-event span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  margin-left: 14px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.star-single-event {
+  margin-top: 32px;
+  height: 20px;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+
+
+.star-single-event img {
+  margin-left: 6px;
+}
+
+/* .event-info-inner p span {
+  color: #42B6E6;
+
+} */
+
+.event-info-inner .createdby {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  color: #404040;
+}
+
+.event-info-inner .createdby span {
+  color: #42B6E6;
+}
+
+.itenery-accordin {
+  margin-top: 50px;
+
+}
+
+.accordian-itinery-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.itenery-accordin h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  height: 20px;
+  line-height: 20px;
+
+}
+
+.event-info-inner {
+  width: 700px;
+  position: relative;
+}
+
+.event-info-inner .heart-section {
+  position: relative;
+}
+
+.event-info-inner .heart-section img {
+  width: 34px;
+  height: 28px;
+}
+
+.event-info-inner .heart-section input[type="checkbox"]:checked~.check::before,
+.likechetBox .tout-created .heart-div input[type='checkbox']:checked~.check::before {
+  background-image: url(./img/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.event-info-inner .heart-section input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.event-info-inner .heart-section label {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.event-info-inner .heart-section .check::before {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  content: "";
+}
+
+.single-accordian-itinery {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordian-itinery {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.name-with-des {
+  display: flex;
+  align-items: center;
+}
+
+.name-with-des h5 {
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  text-align: center;
+  background: #42B6E6;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.name-with-des h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  height: 18px;
+  line-height: 18px;
+  margin-left: 34px;
+}
+
+.droddown-according button {
+  background: transparent !important;
+  border: none !important;
+}
+
+.droddown-according button .rotate {
+  transform: rotate(180deg);
+}
+
+
+.itenery-accordin .show-acc {
+  margin-top: 20px;
+  padding: 20px 50px 20px 50px;
+  background: #FAFAFA;
+}
+
+.itenery-accordin .show-acc p {
+  width: 100px;
+  font-size: 12px;
+  color: #7E7E7E;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.itenery-accordin .showACCImageBox {
+  padding-left: 30px;
+}
+
+.itenery-accordin .show-acc span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  padding-left: 30px;
+  width: 470px;
+  overflow: hidden;
+}
+
+.itenery-accordin .show-acc .showCity,
+.itenery-accordin .show-acc .showDate,
+.itenery-accordin .show-acc .showAbout,
+.itenery-accordin .show-acc .showAddress,
+.itenery-accordin .show-acc .showUrl,
+.itenery-accordin .show-acc .ShowPhone {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.itenery-accordin .showAccImg {
+  padding: 18px 0px 18px 0px;
+}
+
+.about-tour-event {
+  margin-top: 50px;
+}
+
+.about-tour-event h5,
+.schedule-tour h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  height: 20px;
+  line-height: 20px;
+}
+
+.about-tour-event h6 {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  line-height: 23px;
+}
+
+.schedule-tour {
+  margin-top: 30px;
+}
+
+.schedule-tour h6 {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+
+}
+
+.schedule-tour ul {
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+.schedule-tour ul li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  line-height: 25px;
+}
+
+.hosting-inner-list {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 40px;
+  width: 360px;
+  margin-top: 40px;
+}
+
+.sidebar-host-button {
+  padding: 40px 30px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.sidebar-host-button button {
+  background: #42B6E6;
+  border: none !important;
+  border-radius: 116.807px;
+  width: 100%;
+  height: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+.no-host-avilable {
+  padding: 40px 30px;
+}
+
+.no-host-avilable p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  letter-spacing: -0.3px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.heart-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.single-local-host {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 40px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.local-host-list {
+  padding-bottom: 30px;
+}
+
+.single-local-host-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.single-local-host-profile img {
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+}
+
+.pro-tag-suah {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pro-name-suah {
+  display: flex;
+  align-items: center;
+}
+
+.popup-sushname {
+  margin-bottom: 16px;
+}
+
+.popup-sushname h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 24px;
+  line-height: 24px;
+}
+
+.pro-name-suah h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  height: 18px;
+  line-height: 18px;
+  max-width: 150px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
+
+.pro-name-suah img {
+  width: 22px;
+  height: 20px;
+  margin-left: 6px;
+}
+
+.host-catrgory {
+  background-color: #8362E2;
+  border-radius: 133.333px;
+  padding: 7px 10px;
+  margin-right: 6px;
+}
+
+.host-catrgory p {
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  height: 12px;
+  line-height: 12px;
+  width: 80px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.travel-host-catrgory {
+  background-color: #FF5F5F;
+  border-radius: 133.333px;
+  padding: 7px 10px;
+  margin-right: 6px;
+}
+
+
+.travel-host-catrgory p {
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  height: 12px;
+  line-height: 12px;
+  width: 80px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.host-gender {
+  background-color: #fff;
+  border-radius: 133.333px;
+  padding: 6px 10px;
+  border: 1px solid #1B1C1E;
+  margin-right: 6px;
+  /* max-width: fit-content; */
+  width: 100%;
+}
+
+.host-gender p {
+  color: #1B1C1E;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  height: 12px;
+  line-height: 12px;
+  /* width: 40px; */
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.host-gender-male {
+  background-color: #fff;
+  border-radius: 133.333px;
+  padding: 0px 10px;
+  border: 1px solid #1B1C1E;
+  margin-right: 6px;
+
+}
+
+.host-gender-male p {
+  color: #1B1C1E;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  height: 24px;
+  line-height: 24px;
+  /* width: 50px; */
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.host-ages {
+  background-color: #fff;
+  border-radius: 133.333px;
+  padding: 6px 10px;
+  border: 1px solid #1B1C1E;
+
+
+
+}
+
+.host-ages p {
+  color: #1B1C1E;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  height: 12px;
+  line-height: 12px;
+
+  text-align: center;
+}
+
+.pro-tag-name {
+  margin-left: 16px;
+}
+
+.suah-date-time {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 14px;
+}
+
+.total-host-join {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1B1C1E;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
+.total-host-join span {
+  color: #42B6E6 !important;
+}
+
+.info-arrow-btn button {
+  background: transparent;
+  border: none;
+}
+
+.local-host-list .single-local-host:first-child {
+  margin-top: 20px;
+}
+
+.host-info-inner {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.host-info-main {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 40px;
+  padding-top: 58px;
+  padding-bottom: 30px;
+  width: 360px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.host-info-main .likechetBox {
+  position: absolute;
+  display: flex;
+  top: 23px;
+  right: 32px;
+}
+
+.host-info-main .likechetBox .chatbox {
+  width: 29px;
+  height: 32px;
+  border-radius: 0px !important;
+  cursor: pointer;
+}
+
+.host-info-main .likechetBox .hostlistFavourite {
+  width: 34px;
+  height: 28px;
+  border-radius: 0px !important;
+}
+
+.host-info-main .likechetBox .tout-created .heart-div input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.host-info-main .likechetBox .join-msg {
+  margin-right: 26px;
+}
+
+.host-info-main .likechetBox .tout-created .heart-div input[type='checkbox']:checked~.check::before {
+  background-image: url(./img/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.host-info-main .likechetBox .tout-created .heart-div .check::before {
+  display: block;
+}
+
+.host-info-main .likechetBox .tout-created .heart-div label {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.host-info-main .likechetBox .tout-created .heart-div label::before {
+  position: absolute;
+  content: '';
+  width: 34px;
+  height: 28px;
+}
+
+.host-info-main .cancleApplicationbtnbox {
+  margin-top: 10px;
+}
+
+
+.hostinfo-join-btn {
+  margin-top: 31px;
+}
+
+.hostinfo-join-btn button,
+.host-info-main .cancleApplicationbtnbox .cancleApplicationbtn {
+  width: 100%;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  border: none !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.host-info-main .CancleHosting {
+  margin-top: 31px;
+}
+
+.host-info-main .CancleHosting .cancle-my-host:hover {
+  background: transparent;
+}
+
+.host-info-main .CancleHosting .comp-my-host-blue {
+  width: 144px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+}
+
+.host-info-main .CancleHosting .cancle-my-host {
+  width: 144px;
+  height: 50px;
+  background: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #42B6E6;
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  margin-right: 12px;
+}
+
+.host-info-main .CancleHosting .comp-my-host {
+  width: 144px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none;
+}
+
+.about-itinery-info {
+  border-top: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  margin-top: 40px;
+}
+
+.about-itinery-info-inner {
+  padding: 30px;
+}
+
+.about-itinery-info-inner .single-row-about:first-child {
+  margin-top: 0 !important;
+}
+
+.single-row-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.single-row-about h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 18px;
+  line-height: 18px;
+}
+
+.single-row-about h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  height: 18px;
+  line-height: 18px;
+  width: 190px;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.about-itinery-pargraph {
+  padding: 30px;
+}
+
+.about-itinery-pargraph p {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.33px;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.pax-list-host {
+  border-top: 1px solid #DFDFDF;
+}
+
+.pax-list-inner {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.single-pax-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.single-pax-list .pax-user-iamge {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.single-pax-list h5 {
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  letter-spacing: -0.3px;
+  padding-left: 14px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.single-pax-list .pax-flag-imag {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.total-pax-joining p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1B1C1E;
+  height: 16px;
+  line-height: 16px;
+}
+
+.total-pax-joining p span {
+  color: #42B6E6 !important;
+}
+
+.hostinfo-join-btn label {
+  background: #F7F7F7;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  height: 40px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #B7B7B7;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px !important;
+}
+
+.total-review-about {
+  margin-top: 50px;
+}
+
+.total-review-about .host-review-row .single-host-review p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  margin-top: 22px !important;
+}
+
+.review-title h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  height: 20px;
+  line-height: 20px;
+}
+
+.review-title h3 span {
+  color: #FF5F5F !important;
+}
+
+.total-per-rating {
+  width: 30px;
+}
+
+.total-per-rating h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  height: 18px;
+  line-height: 18px;
+}
+
+.total-rating-with-star {
+  margin-top: 21px;
+}
+
+.total-rating-with-star .tour-rating {
+  height: 16px;
+  line-height: 13px;
+}
+
+.total-rating-with-star .tour-rating img {
+  margin-right: 6px;
+}
+
+.total-rating-with-star .tour-rating .starimage,
+.total-rating-with-star .tour-rating .colorstarimage {
+  width: 16px;
+  height: 16px;
+}
+
+.host-review-row {
+  margin-top: 31px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.host-review-row>div:nth-child(2n) {
+  margin-right: 0 !important;
+}
+
+.single-host-review {
+  background: #F9F9F9;
+  border-radius: 20px;
+  padding: 20px 20px 20px 30px;
+  width: 340px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.usre-review-info {
+  display: flex;
+  align-items: center;
+}
+
+.usre-review-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review-date-name {
+  margin-left: 20px;
+}
+
+.review-date-name h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  height: 18px;
+  line-height: 18px;
+}
+
+.review-date-name h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
+.rating-with-single {
+  margin-top: 12px;
+  height: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-with-single .fill-star {
+  color: #FF5F5F;
+}
+
+.rating-with-single h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1B1C1E;
+  height: 16px;
+  line-height: 16px;
+  margin-left: 12px;
+}
+
+.single-host-review .readmore-content {
+  margin-top: 22px;
+}
+
+.single-host-review .readmore-content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  line-height: 20px;
+}
+
+.single-host-review .readmore-content ul span {
+  color: #1B1C1E !important;
+}
+
+/* ==== End Event section ==== */
+
+/* ==== Start Footer section ==== */
+
+.footer-inner {
+  background-color: #F4F4F4;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  margin-left: 30px;
+}
+
+.Footer .msg-badge {
+  position: absolute;
+  right: 15px;
+}
+
+.footer-content-main {
+  padding-top: 46px;
+  padding-bottom: 51px;
+}
+
+.list-of-links {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  line-height: 18px;
+}
+
+.list-of-links a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #222222 !important;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none !important;
+}
+
+.list-of-links a:first-child {
+  margin-left: 0 !important;
+}
+
+.contact-info-my {
+  margin-top: 10px;
+
+}
+
+.contact-info-my p,
+.contact-info-my a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #444444 !important;
+  text-decoration: none !important;
+  line-height: 20px;
+}
+
+.copy-section {
+  margin-top: 20px;
+}
+
+.copy-section p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #444444 !important;
+  height: 16px;
+  line-height: 16px;
+}
+
+/* ==== End Footer section ==== */
+
+/* ==== Start Home page Like checkbox ==== */
+
+.single-card-tour .liked-heart {
+  width: 34px;
+  height: 28px;
+}
+
+.likes-heart input:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.likes-heart input[type="checkbox"] {
+  display: none;
+}
+
+
+.likes-heart input[type="checkbox"]+label {
+  position: relative;
+  cursor: pointer;
+}
+
+/* .likes-heart input[type="checkbox"]+label:before {
+  content: "";
+  background-image: url(./img/blank-heart.svg);
+  width: 34px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  transition: .5s ease;
+  border: 1px solid transparent;
+} */
+
+.likes-heart input[type="checkbox"]:checked+label:before {
+  border: 1px solid transparent;
+  display: none !important;
+  background-color: transparent;
+}
+
+.likes-heart input[type="checkbox"]:checked+label:after {
+  content: '';
+  position: absolute;
+  background-image: url(./img/heart.svg);
+  width: 34px;
+  margin-top: -20px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .5s ease;
+  border: 1px solid transparent;
+}
+
+.likes-heart {
+  position: absolute;
+  top: 60px;
+  right: 22px;
+  width: 34px;
+  height: 28px;
+}
+
+/* ==== End Home page Like checkbox ==== */
+
+
+/* ==== Start Host My Own Page ==== */
+
+
+.host-my-own-page {
+  padding-top: 157px;
+  padding-bottom: 84px;
+}
+
+.host-my-own-page .EventHostMoreDelete {
+  padding-top: 35px;
+}
+
+.host-my-own-page .mainAddEventBorder {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.host-my-own-page .round-number {
+  width: 24px;
+  height: 24px;
+  background: #42b6e6;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.host-my-own-page .host-itiimage {
+  padding-top: 30px;
+  padding-bottom: 76px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+
+
+.host-my-own-page .host-itiimage img {
+  width: 166px;
+  height: 118px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.host-my-own-page .host-itiimage img:nth-child(6n) {
+  margin-right: 0px !important;
+}
+
+.host-my-own-page .EventHostMoreDelete .addEventTitle p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #1B1C1E;
+  margin-left: 26px;
+}
+
+.host-my-own-page .round-number p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.host-my-own-page .moreanddelete-btnbox button {
+  width: 60px;
+  height: 30px;
+  border: 0.5px solid #404040;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+}
+
+.host-my-own-page .moreanddelete-btnbox .more {
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #404040;
+  margin-right: 10px;
+}
+
+.host-my-own-page .moreanddelete-btnbox .delete {
+  background: #404040;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.host-title-with-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.title-host-own h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #1B1C1E;
+  height: 34px;
+  line-height: 34px;
+}
+
+.title-host-own p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #42B6E6;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+.add-btn-host button {
+  width: 110px;
+  height: 40px;
+  border-radius: 116.807px;
+  background: #42B6E6;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none !important;
+}
+
+.view-section-itinerary {
+  /* border-top: 1px solid #C9C9C9; */
+  border-bottom: 1px solid #C9C9C9;
+  /* margin-top: 20px; */
+}
+
+.add-places-sec {
+  height: 218px;
+  line-height: 218px;
+}
+
+.add-places-sec p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 18px;
+  /* line-height:18px; */
+}
+
+.title-and-tourabout {
+  padding-bottom: 50px;
+}
+
+.title-and-tourabout label {
+  margin-top: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  height: 20px;
+  line-height: 20px;
+}
+
+.title-and-tourabout input {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-top: 20px;
+  outline: none !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1B1C1E;
+}
+
+.title-and-tourabout input::placeholder,
+.title-and-tourabout textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  color: #7E7E7E;
+}
+
+.title-and-tourabout textarea {
+  display: block;
+  border: 1px solid #C9C9C9;
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px 20px;
+  min-height: 180px;
+  outline: none !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1B1C1E;
+}
+
+.profile-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  height: 20px;
+  line-height: 20px;
+}
+
+.create-my-itinerary {
+  border-top: 1px solid #C9C9C9;
+  padding-top: 50px;
+}
+
+.my-profile-intro {
+  margin-top: 34px;
+  margin-bottom: 50px;
+}
+
+.my-profile-intro img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.my-profile-intro h6 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  color: #7E7E7E;
+  width: 90px;
+  margin-left: 30px;
+
+}
+
+.create-my-itinerary .HostType {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #C9C9C9;
+  ;
+}
+
+.create-my-itinerary .HostType h5 {
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.HostType .host-btn .localhost {
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  background: rgba(66, 182, 230, 0.07);
+  width: 160px;
+  height: 46px;
+  color: #42B6E6;
+  margin-right: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.HostType .host-btn .travelerhost {
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  background: transparent;
+  height: 46px;
+  width: 160px;
+  color: #7E7E7E;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.name-gender {
+  margin-top: 12px;
+}
+
+.full-my-info>div:first-child {
+  margin-top: 0 !important;
+}
+
+
+.my-profile-intro p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  color: #1B1C1E;
+}
+
+.mainEventHostprofile .HostSelectdate .react-datepicker__input-container,
+.mainBox .HostSelectdate .react-datepicker__input-container {
+  margin-right: 20px;
+}
+
+.mainEventHostprofile .HostSelectdate .react-datepicker__input-container::placeholder,
+.mainBox .HostSelectdate .react-datepicker__input-container::placeholder {
+  color: #7E7E7E;
+}
+
+.mainEventHostprofile .HostSelectdate input,
+.mainBox .HostSelectdate .react-datepicker__input-container input {
+  width: 260px;
+  height: 50px;
+  padding: 16px 20px 16px 54px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  color: #7E7E7E;
+  outline: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+.secMainTrasportation h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1B1C1E;
+  padding-bottom: 20px;
+}
+
+.mainEventHostprofile .css-1s2u09g-control,
+.mainEventHostprofile .css-1pahdxg-control {
+  width: 160px;
+  height: 50px;
+}
+
+.create-my-itinerary .mainHostingDate {
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+.profle-my-itinerary .hostProfileintroduce {
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.create-my-itinerary .mainHostingDate h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #1B1C1E;
+}
+
+.create-my-itinerary .mainHostingDate p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #42B6E6;
+  font-family: 'Poppins';
+}
+
+.create-my-itinerary .HostSelectdate .react-datepicker__header {
+  background: #42B6E6;
+}
+
+.create-my-itinerary .HostSelectdate .react-datepicker__current-month,
+.create-my-itinerary .HostSelectdate .react-datepicker__day-name {
+  color: #fff;
+}
+
+.create-my-itinerary .HostSelectdate .datepicker {
+  width: 260px;
+  height: 50px;
+  padding: 16px 20px 16px 54px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.create-my-itinerary .HostSelectdate .datepicker::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.HostSelectdate .date-icon {
+  z-index: 2;
+  top: 15px;
+  left: 20px;
+}
+
+
+.mainBox .timeSelect .css-1s2u09g-control,
+.mainBox .timeSelect .css-1pahdxg-control {
+  min-width: 160px;
+  width: 100%;
+  height: 50px;
+}
+
+.mainBox .timeSelect {
+  width: 370px;
+  margin-right: 20px;
+}
+
+.mainBox .timeSelect .css-1s2u09g-control {
+  height: 50px !important;
+}
+
+.mainBox .timeSelect .select .css-1okebmr-indicatorSeparator {
+  display: none;
+}
+
+.mainBox .timeSelect .select .css-tlfecz-indicatorContainer,
+.mainBox .timeSelect .select .css-1gtu0rj-indicatorContainer {
+  padding-right: 25px !important;
+}
+
+.timeSelect .css-319lph-ValueContainer {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.mainBox .timeSelect .select .css-g1d714-ValueContainer {
+  padding-left: 20px;
+}
+
+.mainBox .timeSelect .divder {
+  width: 10px;
+  height: 1px;
+  background: #7E7E7E;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.mainBox {
+  margin-bottom: 50px;
+}
+
+.mainBox .location {
+  width: 428px;
+}
+
+.mainBox .location input,
+.mainTransportation .trasporttaion input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  outline: none;
+  padding: 16px 20px;
+  color: #7E7E7E;
+  font-size: 14px;
+}
+
+.mainBox .location input::placeholder,
+.mainTransportation .trasporttaion input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: #7E7E7E;
+}
+
+.mainTransportation {
+  padding-bottom: 50px;
+}
+
+.mainTransportation button {
+  width: 150px;
+  height: 50px;
+}
+
+.mainTransportation .Active-btn {
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  background: rgba(66, 182, 230, 0.07);
+  color: #42B6E6;
+  margin-right: 18px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.mainTransportation .disable-btn {
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  margin-right: 18px;
+  border-radius: 133.333px;
+  background: transparent;
+  color: #7E7E7E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.mainTransportation .trasporttaion {
+  width: 428px;
+}
+
+.mainTransportation .trasporttaion input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+
+}
+
+.mainPax {
+  padding-bottom: 50px;
+}
+
+.mainPax h5,
+.introducemain h5,
+.editorinfomation h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+
+.mainPax .paxnumber {
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+}
+
+.mainPax .paxnumber input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  outline: none;
+  padding: 16px 20px;
+  color: #7E7E7E;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+.mainPax .paxnumber span {
+  position: absolute;
+  top: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  right: 20px;
+  font-family: 'Poppins';
+}
+
+.introducemain {
+  padding-bottom: 50px;
+}
+
+.introducemain textarea {
+  width: 100%;
+  padding: 16px 20px;
+  color: #7E7E7E;
+  outline: none;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.introducemain textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.editorinfomation p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.editorinfomation {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.editorinfomation h5 {
+  padding-bottom: 18px;
+}
+
+.editorinfomation p span {
+  color: #42B6E6;
+
+}
+
+.hostbtn {
+  padding-top: 49px;
+  text-align: center;
+}
+
+.hostbtn .cancle,
+.AddEventandPlace-btn .cancle {
+  width: 300px;
+  height: 50px;
+  background: transparent;
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  color: #42B6E6;
+  margin-right: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hostbtn .host,
+.AddEventandPlace-btn .host {
+  width: 300px;
+  height: 50px;
+  background: #42B6E6;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+.host-list-main-sidebar {
+  border-top: 1px solid #C9C9C9;
+}
+
+
+/* <========  Tour Details Modal CSS Start  ========> */
+
+.tour-details-modal {
+  max-width: 800px !important;
+  width: 100% !important;
+}
+
+.tour-details-modal #tour-details-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+.tour-details-modal #tour-details-title h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  color: #1B1C1E;
+}
+
+.tour-details-modal .modal-content {
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border: none;
+}
+
+.tour-details-modal .tour-details-table {
+  width: 100%;
+}
+
+.tour-details-modal .tour-details-table tr th {
+  padding: 25px 20px 26px 20px;
+  background: #F9F9F9;
+  border-bottom: 1px solid #DFDFDF;
+  width: 180px;
+}
+
+.tour-details-modal .tour-details-table tr th:last-child {
+  padding: 17px 20px !important;
+}
+
+.tour-details-modal .tour-details-table tr th h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  /* height: 18px; */
+  line-height: 18px;
+  color: #404040;
+}
+
+
+
+.tour-details-modal .tour-details-table tr td h6 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.tour-details-modal .tour-details-table tr td {
+  padding: 24px 0px 26px 20px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.tour-details-modal .tour-details-table tr td .upload-pic {
+  padding: 14px 0px 16px 20px !important;
+}
+
+/* <========  Tour Details Modal CSS End  ========> */
+
+
+/*  Custom RadioInput CSS start  */
+
+.HostType .host-btn .radio-btn-detail {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 10px !important;
+}
+
+.mainTransportation .radio-btn-detail {
+  margin-right: 18px;
+  cursor: pointer;
+}
+
+.HostType .host-btn .radio-btn-detail input,
+.mainTransportation .radio-btn-detail input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.HostType .host-btn .radio-btn-detail input:checked~.radio-check,
+.mainTransportation .radio-btn-detail input:checked~.radio-check {
+  background: rgba(66, 182, 230, 0.07);
+  color: #42b6e6;
+  border: 1px solid #42b6e6;
+  font-weight: 700;
+}
+
+.HostType .host-btn .radio-btn-detail .radio-check {
+  width: 160px;
+  height: 46px;
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #7E7E7E;
+  line-height: 42px;
+}
+
+.mainTransportation .radio-btn-detail .radio-check {
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid #C9C9C9;
+  border-radius: 100px;
+  color: #7E7E7E;
+}
+
+.Usersidebar {
+  padding: 58px 31px 40px 31px;
+  position: relative;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.Usersidebar .likechetBox {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  right: 32px;
+}
+
+.Usersidebar .comp-my-host {
+  width: 144px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.Usersidebar .black {
+  width: 144px;
+  height: 50px;
+  background: #c9c9c9;
+  border-radius: 116.807px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.pro-tag-name .tout-created .heart-div {
+  position: relative;
+  width: 34px;
+  height: 28px;
+}
+
+.pro-tag-name .tout-created .heart-div input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.pro-tag-name .tout-created .heart-div label {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.pro-tag-name .tout-created .heart-div label img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.pro-tag-name .tout-created .heart-div label::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  cursor: pointer;
+}
+
+.pro-tag-name .join-pro .join-msgaaa {
+  margin-right: 18.97px;
+}
+
+.pro-tag-name .join-pro .join-msgaaa .msgicon {
+  width: 23.33px;
+  height: 26.35px;
+  border-radius: 0px;
+}
+
+.pro-tag-name .tout-created .heart-div input[type="checkbox"]:checked~.check::before {
+  background-image: url(./img/heart.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 34px;
+  height: 28px;
+}
+
+.Usersidebar .heart-div,
+.details .whistlist-host .whishlist-hostpro .heart-div,
+.details .single-card-tour .tout-created .heart-div {
+  position: relative;
+}
+
+.Usersidebar .heart-div input[type="checkbox"],
+
+.details .whistlist-host .whishlist-hostpro .heart-div input[type="checkbox"],
+.details .single-card-tour .tout-created .heart-div input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.Usersidebar .heart-div label,
+.Usersidebar .heart-div label .hostlistFavourite,
+.details .whistlist-host .whishlist-hostpro .heart-div label .wishFavourite,
+.details .single-card-tour .tout-created .heart-div label .TourFavImg {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.details .whistlist-host .whishlist-hostpro .heart-div label,
+.details .single-card-tour .tout-created .heart-div label {
+  width: 34px;
+  height: 28px;
+}
+
+
+
+.Usersidebar .heart-div .check::before,
+.details .whistlist-host .whishlist-hostpro .heart-div .check::before,
+.details .single-card-tour .tout-created .heart-div .check::before {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  content: "";
+}
+
+.Usersidebar .heart-div input[type="checkbox"]:checked~.check::before {
+  background-image: url(./img/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 28.66px;
+  height: 23px;
+}
+
+.details .whistlist-host .whishlist-hostpro .heart-div input[type="checkbox"]:checked~.check::before,
+.details .single-card-tour .tout-created .heart-div input[type="checkbox"]:checked~.check::before {
+  background-image: url(./img/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 34px;
+  height: 28px;
+}
+
+
+.UserhostlistDate,
+.hostlistsidebar-content {
+  padding: 30px 29px 30px 31px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.UserhostlistDate .main-date-content,
+.UserhostlistDate .maintour-content {
+  padding-bottom: 20px;
+}
+
+.UserhostlistDate .date-title,
+.UserhostlistDate .tourstart-title,
+.UserhostlistDate .transprotation-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7E7E7E;
+}
+
+.UserhostlistDate .main-date,
+.UserhostlistDate .tourdetails,
+.UserhostlistDate .transportaion-details {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+}
+
+
+.hostlistsidebar-content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #7E7E7E;
+}
+
+.main-emptycontent {
+  padding: 30px 29px 40px 31px;
+}
+
+.main-emptycontent .mt-30 {
+  margin-bottom: 40px;
+}
+
+.main-emptycontent .mt-30 .font-16-bold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1B1C1E;
+}
+
+.main-emptycontent .empty-detailscontent .font-18-normal {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #7E7E7E;
+  text-align: center;
+}
+
+/*  Custom RadioInput CSS End  */
+
+
+
+/* ==== End Host My Own Page ==== */
+
+/* ==== Start View Host ==== */
+
+.view-host-section {
+  padding-top: 157px;
+  padding-bottom: 80px;
+}
+
+
+.view-host-inner .title-view-host {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #1B1C1E;
+  height: 34px;
+  line-height: 34px;
+}
+
+.view-host-section-list {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-tab-view-host {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  width: 264px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  height: fit-content;
+}
+
+.single-tab-host {
+  padding-top: 30px;
+}
+
+.single-tab-host-gender,
+.single-tab-host-age {
+  margin-top: 20px;
+}
+
+.single-tab-host h5,
+.single-tab-host-gender h5,
+.single-tab-host-age h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1C1E;
+  margin-bottom: 20px !important;
+  height: 20px;
+}
+
+.single-tab-host button {
+  margin-top: 10px;
+}
+
+
+.single-tab-host .active-button {
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  width: 100%;
+  display: block;
+  height: 50px;
+  background: rgba(66, 182, 230, 0.07);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #42B6E6;
+}
+
+.single-tab-host .button {
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  width: 100%;
+  display: block;
+  height: 50px;
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.list-main-sidebar-inner {
+  display: flex;
+  width: 780px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.list-main-sidebar-inner .single-local-host {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  border-bottom: 1px solid #C9C9C9;
+  margin: 0 !important;
+  width: 300px !important;
+}
+
+.list-main-sidebar-inner .single-local-host .single-local-host-inner {
+  width: 300px !important;
+}
+
+.list-main-sidebar-inner>div:nth-child(2n) {
+  width: 480px !important;
+  justify-content: end !important;
+}
+
+.verify-signup {
+  position: absolute;
+  bottom: 9px;
+  right: 8px;
+  background: #42B6E6;
+  border-radius: 25px;
+  width: 95px;
+  height: 38px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #FFFFFF;
+  border: none;
+}
+
+.info-joinhost {
+  padding: 40px 30px;
+}
+
+.info-joinhost p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 40px;
+  letter-spacing: -0.3px;
+  color: #7E7E7E;
+}
+
+.infodetails p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.customBorder {
+  border-bottom: 1px solid;
+}
+
+.single-local-host-inner .single-host-appstatus {
+  margin-top: 31px;
+  width: 100%;
+  height: 50px;
+  background: #F7F7F7;
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.single-local-host-inner .single-host-appstatus2 {
+  width: 100%;
+  height: 50px;
+  background: #F7F7F7;
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+.single-local-host-inner .hosts-btn:hover {
+  background: #42B6E6;
+}
+
+.single-local-host-inner .hosts-btn {
+  width: 100%;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+}
+
+.btnbox {
+  margin-top: 31px;
+}
+
+.btnbox .hosts-btn {}
+
+.btnbox .hosts-btn:hover {
+  background: #42B6E6;
+}
+
+.single-local-host-inner .single-host-appstatus label,
+.single-local-host-inner .single-host-appstatus2 label {
+  color: #B7B7B7;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 15px !important;
+}
+
+.single-local-hostsecinner .hostlistbtnbox {
+  margin-top: 29px;
+}
+
+.single-local-hostsecinner .hostlistbtnbox .single-host-appstatus {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background: #F7F7F7;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+}
+
+.single-local-hostsecinner .hostlistbtnbox .single-host-appstatus label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  width: 100%;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 10px !important;
+  color: #B7B7B7;
+}
+
+.single-local-hostsecinner .hostlistbtnbox .cancle-my-host {
+  background: transparent !important;
+  border: 1px solid #42B6E6 !important;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  color: #42B6E6;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.single-local-hostsecinner .hostlistbtnbox .ConfirmHosting {
+  background: #42B6E6;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+}
+
+.single-local-hostsecinner .hostlistbtnbox .cancle-my-host,
+.single-local-hostsecinner .hostlistbtnbox .ConfirmHosting {
+  width: 144px !important;
+  height: 50px;
+}
+
+.ikechetBox {
+  position: absolute;
+}
+
+.emptymain p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.emptymain p span {
+  color: #42B6E6;
+}
+
+.customclass {
+  padding: 40px 30px !important;
+}
+
+.pax-host-list {
+  padding: 0px;
+}
+
+/*  Custom Checkbox CSS Start  */
+
+.view-host-section .view-host-section-list .single-tab-host .radio-label,
+.view-host-section .view-host-section-list .single-tab-host-gender .radio-label,
+.view-host-section .view-host-section-list .single-tab-host-age .radio-label {
+  width: 100%;
+  padding: 14px 0px 14px 0px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  color: #7E7E7E;
+  margin-bottom: 10px !important;
+}
+
+
+.view-host-section .view-host-section-list .single-tab-host input[type='checkbox'],
+.view-host-section .view-host-section-list .single-tab-host-gender input[type='checkbox'],
+.view-host-section .view-host-section-list .single-tab-host-age input[type='checkbox'] {
+  -webkit-appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.view-host-section .view-host-section-list .single-tab-host input[type='checkbox']::after,
+.view-host-section .view-host-section-list .single-tab-host-gender input[type='checkbox']::after,
+.view-host-section .view-host-section-list .single-tab-host-age input[type='checkbox']::after {
+  background-color: transparent;
+  position: absolute;
+  border-radius: 25px;
+  content: "";
+  display: block;
+  width: 234px;
+  height: 50px;
+  line-height: 50px;
+  top: -31px;
+  left: 0px;
+  color: #42b6e6;
+}
+
+.view-host-section .view-host-section-list .single-tab-host input[type='checkbox']:checked~label,
+.view-host-section .view-host-section-list .single-tab-host-gender input[type='checkbox']:checked~label,
+.view-host-section .view-host-section-list .single-tab-host-age input[type='checkbox']:checked~label {
+  color: #42B6E6;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.view-host-section .view-host-section-list .single-tab-host input[type='checkbox']:checked::after,
+.view-host-section .view-host-section-list .single-tab-host-gender input[type='checkbox']:checked::after,
+.view-host-section .view-host-section-list .single-tab-host-age input[type='checkbox']:checked::after {
+  background: rgba(66, 182, 230, 0.2);
+  border: 1px solid #42b6e6;
+
+}
+
+/*  Custom Checkbox End CSS  */
+
+
+
+.singleMyHosting {
+  padding-top: 155px;
+  padding-bottom: 257px;
+}
+
+
+.singleMyHosting .details-header h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  height: 34px;
+  line-height: 34px;
+  color: #1B1C1E;
+}
+
+.singleMyHosting .details-header,
+.singleMyHosting .details-tabs {
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+
+
+
+.singleMyHosting .details-tabs span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #1B1C1E;
+}
+
+.singleMyHosting .details-tabs .active {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #42B6E6;
+}
+
+.singleMyHosting .my-host-check {
+  position: relative;
+}
+
+.singleMyHosting .single-card-tour {
+  margin-top: 30px;
+}
+
+.singleMyHosting .my-host-check .container_check {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  color: #42B6E6;
+  padding-left: 28px;
+}
+
+.singleMyHosting .my-host-check .container_check #agree {
+  opacity: 0;
+  position: absolute;
+}
+
+.singleMyHosting .my-host-check .container_check input:checked~.MyHostingCheck {
+  background-color: #42B6E6;
+}
+
+.singleMyHosting .my-host-check .container_check .MyHostingCheck {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 7px;
+  border-radius: 50%;
+  background: #B7B7B7;
+  cursor: pointer;
+
+}
+
+.singleMyHosting .my-host-check .container_check .MyHostingCheck::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+
+/* ==== End View Host ==== */
+
+/* <========  Applicationpax CSS Start ========> */
+
+.main-app-box {
+  max-width: 700px;
+  width: 100%;
+  padding: 30px 20px;
+  background: #F9F9F9;
+  border-radius: 20px;
+  margin-top: 31px;
+}
+
+.main-app-box h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1B1C1E;
+  padding-bottom: 10px;
+}
+
+.main-app-box .details-tabs .active {
+  color: #42B6E6;
+}
+
+.main-app-box .details-tabs span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1B1C1E;
+
+}
+
+.main-app-box .details-tabs {
+  line-height: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.main-app-box .h-423 {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.main-app-box .Noapplication p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #7E7E7E;
+}
+
+.main-app-box .chat-accept-decline-sec {
+  padding: 30px 0px 30px 0px;
+  border-bottom: 1px solid #C9C9C9;
+
+}
+
+.main-app-box .chat-accept-decline-sec .img-join-host {
+  margin-bottom: 10px;
+}
+
+.main-app-box .chat-accept-decline-sec .applicationUserTitel {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1B1C1E;
+}
+
+.main-app-box .chat-accept-decline-sec .applicationGender .hots-tags {
+  border: 0.6px solid #1B1C1E;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  padding: 4px 10px;
+  margin-right: 6px;
+}
+
+.main-app-box .chat-accept-decline-sec .applicationGender .hots-tags p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12.13px;
+  color: #1B1C1E;
+}
+
+.main-app-box .chat-accept-decline-sec .ApplicationMainBox {
+  margin-left: 16px;
+}
+
+.main-app-box .applicationDate {
+  margin: 0px 19px 0px 19px;
+}
+
+.main-app-box .applicationDate span {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #1B1C1E;
+}
+
+.main-app-box .applicationDate p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #1B1C1E;
+}
+
+.main-app-box .ApplicationChatBox button {
+  width: 72px;
+  height: 40px;
+  margin-right: 10px;
+
+}
+
+.main-app-box .ApplicationChatBox button:last-child {
+  margin-right: 0px;
+}
+
+.main-app-box .ApplicationChatBox .ApplicationChat {
+  background: #42B6E6;
+  border-radius: 116.807px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.main-app-box .ApplicationChatBox .ApplicationAccept {
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  background: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #42B6E6;
+
+}
+
+.main-app-box .ApplicationChatBox .ApplicationDecline {
+  border: 1px solid #FF5F5F;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  background: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FF5F5F;
+}
+
+/* <========  Applicationpax CSS End ========> */
+
+
+
+
+
+
+
+
+/* <========  modal CSS  ========> */
+
+
+
+
+.allchatmodal .footerchatBox {
+  padding: 30px 30px 20px 30px;
+  border-bottom: 1px solid #DFDFDF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.allchatmodal .footerchatBox h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.allchatmodal .modal-chat-title {
+  padding: 30px 31px 20px 29px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.allchatmodal .modal-chat-title h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  margin-left: 16px;
+}
+
+.allchatmodal .contentof-chat {
+  height: 407px;
+  overflow-y: auto;
+}
+
+.allchatmodal .contentof-chat .chat-date {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.allchatmodal .contentof-chat .chat-date p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #7E7E7E;
+  max-width: 72px;
+  width: 100%;
+  height: 12px;
+  margin: 0 auto;
+}
+
+.allchatmodal .contentof-chat .chat-date p::before {
+  width: 160px;
+  height: 1px;
+  position: absolute;
+  content: '';
+  background: #DFDFDF;
+  top: 6px;
+  left: 0px;
+}
+
+.allchatmodal .contentof-chat .chat-date p::after {
+  width: 160px;
+  height: 1px;
+  position: absolute;
+  content: '';
+  background: #DFDFDF;
+  right: 0px;
+  top: 6px;
+}
+
+.allchatmodal .userSendMsg {
+  padding: 14px 30px;
+}
+
+.allchatmodal .userSendMsg .content-of-msg {
+  max-width: 226px;
+  width: 100%;
+  word-break: break-word;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.allchatmodal .userSendMsg .custom-date-chat {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: #7E7E7E;
+  height: 12px;
+  line-height: 12px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.allchatmodal .userSendMsg .chateContentMsg {
+  padding: 14px 16px;
+  background: #42B6E6;
+  border-radius: 20px 0px 20px 20px;
+}
+
+.allchatmodal .submit-complet {
+  padding: 16px 30px 16px 30px;
+  border-top: 1px solid #DFDFDF !important;
+}
+
+.allchatmodal .submit-chat input[type="submit"] {
+  background-image: url(./img/SendMsg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+.allchatmodal .submit-chat textarea {
+  resize: none;
+  color: #1B1C1E;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+}
+
+.allchatmodal .modal-content {
+  border-radius: 20px;
+}
+
+.allchatmodal {
+  max-width: 400px !important;
+  width: 100% !important;
+  top: 109px;
+  left: 348px;
+}
+
+.allchatmodal .chat-scroll {
+  height: 464px;
+}
+
+
+.allchatmodal .footerchatBox .footerClose {
+  width: 14.02px;
+  height: 14.32px;
+  cursor: pointer;
+}
+
+.allchatmodal .modal-chat {
+  padding: 20px 30px 20px 28px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.allchatmodal .modal-chat .modal-chat-center {
+  margin-left: 20px;
+  min-width: 210px;
+  width: 100%;
+}
+
+.allchatmodal .modal-chat .modal-chat-center h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #42B6E6;
+  margin-bottom: 6px !important;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.allchatmodal .modal-chat .modal-chat-center p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #1B1C1E;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.allchatmodal .modal-chat .modal-chat-right .badge-danger {
+  background-color: #FF5F5F;
+  width: 26px;
+  height: 20px;
+}
+
+.allchatmodal .modal-chat .modal-chat-right {
+  text-align: end;
+  width: 100%;
+}
+
+.allchatmodal .modal-chat .modal-chat-right p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  color: #7E7E7E;
+  margin-top: 5px;
+  max-width: 60px;
+  width: 100%;
+}
+
+
+.allchatmodal .user-imgchat {
+  margin-right: 10px;
+  position: absolute;
+  top: 13px;
+}
+
+.allchatmodal .secUserChat {
+  padding: 0px 30px 0px 30px;
+}
+
+.allchatmodal .secUserChat .UserMainChat {
+  margin-left: 50px;
+}
+
+.allchatmodal .single-chat .blue-font {
+  color: #42B6E6;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  margin-left: 50px !important;
+  margin-top: 10px;
+}
+
+.allchatmodal .single-chat .secChatHead {
+  padding: 14px 16px;
+  background: #EFEFEF;
+  border-radius: 0px 20px 20px 20px;
+  margin-top: 10px;
+}
+
+.allchatmodal .single-chat .secChatHead .content-of-msg-two {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #1B1C1E;
+  max-width: 176px;
+  width: auto;
+  word-break: break-word;
+}
+
+.allchatmodal .single-chat .custom-date-chat-two {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: #7E7E7E;
+  white-space: nowrap;
+  margin-left: 10px !important;
+}
+
+.welcome-modal .modal-content .would-host,
+.welcome-modal .modal-content .would-host-notice,
+.welcome-modal .host-tour-modal-notice,
+.welcome-modal .welcome-join-modal,
+.welcome-modal .app-body,
+.welcome-modal .modal-body .accept-notice-review,
+.welcome-modal .HostDeleteContent,
+.welcome-modal .ConfDelete,
+.welcome-modal .app-accept-body,
+.welcome-modal .accept-notice,
+.addonly-one .sameNoticeContent,
+.warning-demo .wraningInner,
+.welcome-modal .host-tourInner,
+.welcome-modal .com-hosting,
+.welcome-modal .yes-notice,
+.welcome-modal .userHostcancleContent,
+.welcome-modal .myApplicationContent,
+.welcome-modal .ConMyApplicationContent {
+  padding: 30px 40px 50px 40px;
+}
+
+.welcome-modal .hostko {
+  padding: 24px 30px 20px 30px;
+}
+
+.welcome-modal .pro-tag-nameko {
+  min-width: 230px;
+  width: 100%;
+  padding-left: 16px;
+}
+
+.welcome-modal .pro-tag-nameko .popup-sushnameko {
+  margin-bottom: 10px;
+}
+
+.welcome-modal .pro-tag-nameko .popup-sushnameko .userName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+}
+
+.welcome-modal .pro-tag-nameko .host-mainTag .local-host-bgko {
+  background: #8362E2;
+  border-radius: 133.333px;
+  padding: 7px 10px;
+  margin-right: 6px;
+}
+
+.welcome-modal .pro-tag-nameko .host-mainTag .local-host-bgko .info {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  height: 12px;
+  color: #FFFFFF;
+}
+
+.welcome-modal .pro-tag-nameko .host-mainTag .travel-host-bgko {
+  background: #FF5F5F;
+  border-radius: 133.333px;
+  padding: 7px 10px;
+  margin-right: 6px;
+}
+
+.welcome-modal .pro-tag-nameko .host-mainTag .travel-host-bgko .info {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  height: 12px;
+  color: #FFFFFF;
+}
+
+.welcome-modal .pro-tag-nameko .host-mainTag .hots-gender,
+.welcome-modal .pro-tag-nameko .host-mainTag .hots-age {
+  border: 0.6px solid #1B1C1E;
+  border-radius: 133.333px;
+  padding: 6px 10px;
+  margin-right: 6px;
+}
+
+.welcome-modal .pro-tag-nameko .host-mainTag .hots-gender p,
+.welcome-modal .pro-tag-nameko .host-mainTag .hots-age p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  height: 12px;
+  line-height: 12px;
+  color: #1B1C1E;
+}
+
+.welcome-modal .hostko .heart-div {
+  position: relative;
+}
+
+.welcome-modal .hostko .heart-div input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.welcome-modal .hostko .heart-div label {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.welcome-modal .hostko .tout-created {
+  width: 34px;
+  height: 28px;
+}
+
+.welcome-modal .hostko .heart-div label img {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-modal .hostko .heart-div label::before {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  content: "";
+}
+
+.welcome-modal .hostko .heart-div input[type="checkbox"]:checked~.check::before {
+  background-image: url(./img/heart.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 34px;
+  height: 28px;
+}
+
+.borderCustom {
+  width: 400px;
+  height: 1px;
+  margin: 0 auto;
+  background: #C9C9C9;
+}
+
+.welcome-modal .userImgContentko {
+  padding: 19px 30px 50px 30px;
+}
+
+.welcome-modal .userImgContentko .NewHostingtitleko {
+  padding-bottom: 20px;
+}
+
+
+
+.welcome-modal .userImgContentko .NewHostingtitleko p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.welcome-modal .userImgContentko .mainProfileko {
+  margin-bottom: 20px;
+}
+
+.welcome-modal .userImgContentko .mainProfileko img {
+  width: 110px;
+  height: 100px;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent {
+  max-width: 270px;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent h3 {
+  color: #1B1C1E !important;
+  font-weight: 700 !important;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .CountryReview {
+  margin-bottom: 12px !important;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent h3,
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .modalcountryname {
+  margin-bottom: 8px !important;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .modalcountryname,
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .CountryReview,
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .loaction h6 p,
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  color: #7E7E7E;
+
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .CountryReview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .CountryReview .onlyheart img {
+  width: 14.77px;
+  height: 13.54px;
+}
+
+.welcome-modal .userImgContentko .mainProfileko .modalImageContent .loaction h6 p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.welcome-modal .date-timeko .date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+  height: 16px;
+  line-height: 16px;
+}
+
+.welcome-modal .date-timeko .pax-font {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #1B1C1E;
+}
+
+.welcome-modal .date-timeko .pax-font .blue-font {
+  color: #42B6E6;
+
+}
+
+.welcome-modal .hostInnerTitleko {
+  padding: 40px 0px 30px 0px;
+}
+
+.welcome-modal .hostInnerTitleko p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  color: #404040;
+}
+
+.welcome-modal .HostInnerSecContentko,
+.welcome-modal .HostInnerThreeContentko {
+  padding: 0px 20px 20px 20px;
+  position: relative;
+}
+
+.welcome-modal .HostInnerFourContentko {
+  padding: 0px 20px 40px 20px;
+  position: relative;
+}
+
+.welcome-modal .HostInnerThreeContentko p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 18px;
+  line-height: 18px;
+}
+
+.welcome-modal .HostInnerSecContentko .dotsko,
+.welcome-modal .HostInnerThreeContentko .dotsko,
+.welcome-modal .HostInnerFourContentko .dotsko {
+  position: absolute;
+  top: -9px;
+  left: 17px;
+
+}
+
+
+
+.welcome-modal .HostInnerSecContentko .dotsko .svg-inline--fa,
+.welcome-modal .HostInnerThreeContentko .dotsko .svg-inline--fa,
+.welcome-modal .HostInnerFourContentko .dotsko .svg-inline--fa {
+  width: 2px;
+  height: 2px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .HostInnerSecContentko p,
+.welcome-modal .HostInnerFourContentko p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 46px;
+  line-height: 23px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .hostInnerTitle {
+  padding-top: 40px;
+  padding-bottom: 34px;
+}
+
+.welcome-modal .host-tourInner .HostInnerThreeContent {
+  padding: 0px 30px 16px 30px;
+  position: relative;
+}
+
+.welcome-modal .host-tourInner .HostInnerFourContent {
+  padding: 0px 30px 50px 30px;
+  position: relative;
+}
+
+.welcome-modal .host-tourInner .HostInnerSecContent {
+  padding: 0px 30px 20px 30px;
+  position: relative;
+}
+
+.welcome-modal .host-tourInner .HostInnerFourContent p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 66px;
+  line-height: 33px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .host-tourInner .HostInnerSecContent p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 80px;
+  line-height: 26px;
+}
+
+.welcome-modal .host-tourInner .HostInnerThreeContent p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .host-tourInner .dots {
+  position: absolute;
+  top: -4px;
+  left: 26px;
+}
+
+.welcome-modal .host-tourInner .dots .svg-inline--fa {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  color: #7E7E7E;
+}
+
+.welcome-modal .hostInnerTitle p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+}
+
+
+.welcome-modal .EditDeleteContentBox,
+.terms-usecard .terms-popup,
+.privacy-usecard .terms-popup {
+  padding: 50px 40px 51px 40px;
+}
+
+.terms-usecard .terms-popup .popup-info,
+.privacy-usecard .terms-popup .popup-info {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.terms-usecard,
+.privacy-usecard {
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.terms-usecard .modal-content,
+.privacy-usecard .modal-content {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+}
+
+.terms-usecard .terms-popup .popup-term-use,
+.privacy-usecard .terms-popup .popup-Privacy-policy {
+  margin-top: 30px;
+  padding: 30px 20px;
+  border: 1px solid #7E7E7E;
+  margin-bottom: 51px;
+  height: 450px;
+  overflow-y: auto;
+}
+
+.privacy-usecard .terms-popup .popup-Privacy-policy .mt-50 {
+  margin-top: 30px;
+}
+
+.privacy-usecard .terms-popup .popup-Privacy-policy p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.terms-usecard .terms-popup .popup-term-use h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  height: 24px;
+  color: #404040;
+  margin-bottom: 16px !important;
+}
+
+.terms-usecard .terms-popup .popup-term-use .popupTermInner {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #404040;
+  line-height: 26px;
+}
+
+.terms-usecard .terms-popup .detail-Closebutton button,
+.privacy-usecard .detail-Closebutton button {
+  width: 100%;
+  height: 60px;
+  border: 2px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 143.697px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #42B6E6;
+  background: transparent;
+}
+
+.welcome-modal .EditDeleteContentBox .del-acc .delAccinnerText {
+  padding: 40px 30px;
+}
+
+.welcome-modal .EditDeleteContentBox .del-acc .delAccinnerText .deletebodyen {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 84px;
+  line-height: 28px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .EditDeleteContentBox .del-acc .delAccinnerTextko {
+  padding: 40px 20px;
+}
+
+.welcome-modal .EditDeleteContentBox .del-acc .delAccinnerTextko .deletebodyko {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 46px;
+  line-height: 23px;
+}
+
+/* .welcome-modal .EditDeleteContentBox .del-acc p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 84px;
+  line-height: 28px;
+} */
+
+.welcome-modal .EditDeleteContentBox .del-acc {
+  margin-top: 30px;
+  margin-bottom: 31px;
+}
+
+.welcome-modal .modal-content .welcome-content .canclehosting-inner {
+  padding: 30px 40px 22px 40px;
+}
+
+
+.welcome-modal .modal-content .would-host .would-host-inner,
+.welcome-modal .modal-content .would-host-notice .notice-details,
+.welcome-modal .modal-content .welcome-content .canclehosting-inner .canclehostingcontenet,
+.welcome-modal .acceptnotice-inner p,
+.welcome-modal .welcome-join-modal .join-innner,
+.welcome-modal .app-body .joinapplication,
+.reviewstar-popup .review-body .reviewContent,
+.reviewstar-popup .review-body .reviewContentko,
+.welcome-modal .modal-body .accept-notice-review .acceptDetails,
+.welcome-modal .modal-body .accept-notice-review .acceptDetailsko,
+.welcome-modal .HostDeleteContent .DeleteContent,
+.welcome-modal .ConfDelete .ConfDeleteContent,
+.welcome-modal .canclePopUpContent,
+.welcome-modal .app-accept-body .DeclineContentInner,
+.welcome-modal .app-accept-body .AcceptApplicationInner,
+.welcome-modal .app-accept-body .AcceptApplicationInnerko,
+.welcome-modal .accept-notice .AcceptNoticeInner,
+.welcome-modal .EditDeleteContentBox .del-acc,
+.addonly-one .sameNoticeInner,
+.warning-demo .wraningInner .wraningContent,
+.welcome-modal .hostBG,
+.welcome-modal .host-tour-modal-notice .HostInnerNotice,
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG,
+.welcome-modal .hostprofile-modal,
+.welcome-modal .cancleBodyInner,
+.welcome-modal .cancleBodyInnerko,
+.welcome-modal .comHostingInner,
+.welcome-modal .comHostingInnerko,
+.welcome-modal .ComHostingNotice,
+.welcome-modal .userHostCancleInner,
+.welcome-modal .MyApplicationInner,
+.welcome-modal .MyApplicationInnerko,
+.welcome-modal .ConMyApplicationInner,
+.welcome-modal .YesNoticeInner,
+.welcome-modal .YesNoticeInnerko,
+.welcome-modal .acceptNoticeInner {
+  background-color: #F9F9F9;
+  border-radius: 20px;
+}
+
+.welcome-modal .modal-content .welcome-content .canclehosting-inner .canclehostingcontenet h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #404040;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.welcome-modal .modal-content .welcome-content .canclehosting-inner .canclehostingcontenet p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #7E7E7E;
+  padding: 0px 30px 40px;
+}
+
+.welcome-modal .modal-body .accept-notice-review .acceptDetails p {
+  padding: 40px 0px 40px 0px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .host-tour-modal-notice .hostprofile-modal p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Poppins';
+  color: #404040;
+}
+
+.welcome-modal .app-body .joinapplication .joinApplicationtextCtn {
+  padding: 40px 20px 20px 20px;
+}
+
+.welcome-modal .app-body .joinapplication .joinapplicationcontent {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28.66px;
+  height: 86px;
+  text-align: center;
+  color: #404040;
+}
+
+.welcome-modal .app-body .joinapplication .applicationaccount {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.welcome-modal .app-body .joinapplication .applicationaccount label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .acceptnotice-inner p,
+.welcome-modal .HostDeleteContent .DeleteContent p,
+.welcome-modal .modal-content .would-host-notice .notice-details,
+.welcome-modal .ConfDelete .ConfDeleteContent p,
+/* .welcome-modal .canclePopUpContent p, */
+.welcome-modal .app-accept-body .DeclineContentInner .DeclineText,
+.welcome-modal .app-accept-body .AcceptApplicationInner p,
+.welcome-modal .accept-notice .AcceptNoticeInner,
+.addonly-one .sameNoticeContent p,
+.warning-demo .wraningInner .wraningContent p,
+.welcome-modal .host-tour-modal-notice .HostInnerNotice p,
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG,
+.welcome-modal .hostprofile-modal,
+.welcome-modal .cancleBodyInner,
+.welcome-modal .comHostingInner,
+.welcome-modal .ComHostingNotice,
+.welcome-modal .userHostCancleInner,
+.welcome-modal .MyApplicationInner,
+.welcome-modal .ConMyApplicationInner,
+.welcome-modal .YesNoticeInner,
+.welcome-modal .YesNoticeInnerko,
+.welcome-modal .CanclePopupInnerko,
+.welcome-modal .acceptNoticeInner,
+.welcome-modal .app-accept-body .DeclineContentInner,
+.welcome-modal .app-accept-body .AcceptApplicationInnerko,
+.welcome-modal .MyApplicationInnerko,
+.welcome-modal .cancleBodyInnerko,
+.welcome-modal .comHostingInnerko,
+.reviewstar-popup .review-body .reviewContentko,
+.welcome-modal .modal-body .accept-notice-review .acceptDetailsko {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.reviewstar-popup .review-body .reviewContentko {
+  padding-left: 20px;
+  padding-RIGHT: 20px;
+}
+
+.welcome-modal .CanclePopupInner {
+  padding: 40px 20px 50px 20px;
+}
+
+
+
+.welcome-modal .CanclePopupInner p {
+  height: 54px;
+  line-height: 27px;
+}
+
+.welcome-modal .app-accept-body .DeclineContentInner .DeclineTextko {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 46px;
+  line-height: 23px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .HostDeleteContent .DeleteContent p,
+.welcome-modal .ConfDelete .ConfDeleteContent p,
+.welcome-modal .canclePopUpContent p,
+.welcome-modal .app-accept-body .DeclineContentInner .DeclineText,
+.welcome-modal .app-accept-body .AcceptApplicationInner p,
+.welcome-modal .accept-notice .AcceptNoticeInner .acceptNoticeInnertexten,
+.addonly-one .sameNoticeContent p,
+.warning-demo .wraningInner .wraningContent p,
+.welcome-modal .host-tour-modal-notice .HostInnerNotice p,
+.welcome-modal .acceptnotice-inner p,
+.welcome-modal .comHostingInner p,
+.welcome-modal .ComHostingNotice p,
+.welcome-modal .userHostCancleInner p,
+.welcome-modal .MyApplicationInner p,
+.welcome-modal .ConMyApplicationInner p,
+.welcome-modal .YesNoticeInner p,
+.welcome-modal .modal-content .would-host-notice .notice-details p,
+.welcome-modal .CanclePopupInnerko p,
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG .canclehostingtextko,
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG .canclehostingen,
+.welcome-modal .acceptNoticeInner .modal-signup-suben,
+.welcome-modal .modal-content .would-host-notice .notice-details .NotiDetailsen,
+.welcome-modal .cancleBodyInner p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  font-family: 'Poppins';
+}
+
+
+
+.welcome-modal .acceptNoticeInner .modal-signup-suben,
+.welcome-modal .accept-notice .AcceptNoticeInner .acceptNoticeInnertexten {
+  height: 56px;
+  line-height: 28px;
+}
+
+.welcome-modal .cancleBodyInner p {
+  height: 20px;
+  line-height: 20px;
+}
+
+.welcome-modal .acceptNoticeInner .modal-signup-subko,
+.welcome-modal .app-accept-body .AcceptApplicationInnerko p,
+.welcome-modal .accept-notice .AcceptNoticeInner .acceptNoticeInnertextko,
+.welcome-modal .MyApplicationInnerko p,
+.welcome-modal .cancleBodyInnerko p,
+.reviewstar-popup .review-body .reviewContentko .ReviewDetailskon {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 46px;
+  line-height: 23px;
+}
+
+.welcome-modal .CanclePopupInnerko p {
+  height: 46px;
+  line-height: 23px;
+}
+
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG .canclehostingtextko {
+  height: 66px;
+  line-height: 22px;
+  padding: 0px 20px 0px 20px;
+}
+
+.welcome-modal .modal-content .would-host-notice .notice-details .NotiDetailsko,
+.welcome-modal .comHostingInnerko p,
+.welcome-modal .YesNoticeInnerko p,
+.welcome-modal .modal-body .accept-notice-review .acceptDetailsko p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  height: 18px;
+  line-height: 18px;
+}
+
+.welcome-modal .app-accept-body .DeclineContentInner .DeclineText,
+.welcome-modal .app-accept-body .AcceptApplicationInner p {
+  line-height: 32px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .content-box {
+  padding: 34px 30px 50px 30px;
+}
+
+
+.welcome-modal .modal-content .would-host .would-host-inner .koContent-box {
+  padding: 30px 20px 40px 20px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .content-box span,
+.welcome-modal .modal-content .would-host .would-host-inner .koContent-box span {
+  color: #7E7E7E;
+  margin-right: 2px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .content-box .first-box {
+  margin-bottom: 30px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .content-box .sec-box {
+  margin-bottom: 16px;
+}
+
+.welcome-modal .welcome-join-modal .join-innner label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7E7E7E;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.welcome-modal .cancle-body-app,
+.welcome-modal .host-tour-modal-notice {
+  padding: 30px 40px 50px 40px;
+}
+
+.welcome-modal .CancleHostingInnerContent {
+  padding: 30px 40px 22px 40px;
+}
+
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG {
+  padding-top: 40px;
+}
+
+.welcome-modal .CancleHostingInnerContent .CancleHostingBG .canclehostingtextko {}
+
+/* .welcome-modal .CancleHostingInnerContent .CancleHostingBG p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 44px;
+  line-height: 22px;
+  color: #7E7E7E;
+} */
+
+.welcome-modal .CancleHostingInnerContent h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  margin-bottom: 20px !important;
+}
+
+.welcome-modal .modal-content .would-btn-box,
+.welcome-modal .modal-content .notice-btn,
+.welcome-modal .modal-content .notice-btnko,
+.welcome-modal .modal-content .canclehostingbtnbox,
+.welcome-modal .accept-okay,
+.hosttourmodalnotice,
+.welcome-modal .join-btnbox,
+.welcome-modal .applicationBtn,
+.reviewstar-popup .reviewTextarea,
+.reviewstar-popup .reviewTextareako,
+.reviewstar-popup .reviewRatingConBtn,
+.reviewstar-popup .reviewRatingConBtnko,
+.welcome-modal .accept-noticebtnbox,
+.welcome-modal .accept-noticebtnboxko,
+.welcome-modal .date-time,
+.welcome-modal .ConfirmDeleteBtn,
+.welcome-modal .canclePopupBtn,
+.welcome-modal .confirmCancleok,
+.welcome-modal .confirmCancleokko,
+.welcome-modal .DeclineBtnBox,
+.welcome-modal .AcceptApplicationBtn,
+.welcome-modal .AcceptNoticeBtn,
+.welcome-modal .AcceptNoticeBtnko,
+.addonly-one .AddNoticeBtn,
+.warning-demo .warningBtn,
+.welcome-modal .hostingBtnBox,
+.welcome-modal .HostNoticeok,
+.welcome-modal .CancleHostingBtnBox,
+.welcome-modal .comHostingBtnBox,
+.welcome-modal .ComHostNoticeBtn,
+.welcome-modal .okCancle,
+.welcome-modal .myApplicationBtnBox,
+.welcome-modal .ConMyApplicationBtn,
+.welcome-modal .comHostingBtnbox,
+.welcome-modal .comHostingBtnboxko,
+.welcome-modal .YseNoticeBtn,
+.welcome-modal .YseNoticeBtnko,
+.welcome-modal .would-btn-boxko,
+.welcome-modal .DeclineBtnBoxko,
+.welcome-modal .hostingBtnBoxko,
+.welcome-modal .AcceptApplicationBtnko,
+.welcome-modal .AcceptNoticeBtnko,
+.welcome-modal .myApplicationBtnBoxko {
+  padding: 0px 40px 50px 40px;
+}
+
+.welcome-modal .HostDeleteBtnBox {
+  padding: 0px 40px 70px 40px;
+}
+
+.welcome-modal .modal-content .notice-btn button,
+.welcome-modal .accept-okay button,
+.hosttourmodalnotice button,
+.welcome-modal .applicationBtn button,
+.welcome-modal .accept-noticebtnbox button,
+.welcome-modal .ConfirmDeleteBtn .ConfOk,
+.welcome-modal .confirmCancleok button,
+.welcome-modal .AcceptNoticeBtn .AcceptOK button,
+.addonly-one .AddNoticeBtn button,
+.warning-demo .warningBtn button,
+.welcome-modal .HostNoticeok button,
+.welcome-modal .ComHostNoticeBtn button,
+.welcome-modal .okCancle button,
+.welcome-modal .ConMyApplicationBtn button,
+.welcome-modal .YseNoticeBtn button,
+.welcome-modal .AcceptNoticeBtn button {
+  width: 100%;
+  height: 60px;
+  background: #42B6E6;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .notice-btnko button,
+.welcome-modal .AcceptNoticeBtnko button,
+.welcome-modal .confirmCancleokko button,
+.welcome-modal .YseNoticeBtnko button,
+.welcome-modal .accept-noticebtnboxko button {
+  width: 100%;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none;
+}
+
+.welcome-modal .modal-content .would-btn-box .cancle,
+.welcome-modal .modal-content .canclehostingbtnbox .hostingcancle,
+.welcome-modal .join-btnbox .joincancle,
+.reviewstar-popup .reviewRatingConBtn .reviewCancle,
+.welcome-modal .HostDeleteBtnBox .HostMyOwnCancle,
+.welcome-modal .canclePopupBtn .cancle button,
+.welcome-modal .DeclineBtnBox .Cancle button,
+.welcome-modal .AcceptApplicationBtn .cancle button,
+.welcome-modal .hostingBtnBox .Cancle button,
+.welcome-modal .CancleHostingBtnBox .cancle button,
+.welcome-modal .comHostingBtnBox .cancle button,
+.welcome-modal .myApplicationBtnBox .cancle button,
+.welcome-modal .comHostingBtnbox .cancle button {
+  width: 180px;
+  height: 60px;
+  border: 2px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 143.697px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #42B6E6;
+  background: transparent;
+  font-family: 'Roboto';
+}
+
+
+
+.welcome-modal .would-btn-boxko .cancle,
+.welcome-modal .DeclineBtnBoxko .Cancle button,
+.welcome-modal .hostingBtnBoxko .Cancle button,
+.welcome-modal .AcceptApplicationBtnko .cancle button,
+.welcome-modal .myApplicationBtnBoxko .cancle button,
+.welcome-modal .comHostingBtnboxko .cancle button,
+.reviewstar-popup .reviewRatingConBtnko .reviewCancle {
+  font-size: 14px;
+  width: 180px;
+  height: 50px;
+  border: 2px solid #42B6E6;
+  border-radius: 143.697px;
+  background: transparent;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #42B6E6;
+}
+
+.welcome-modal .would-btn-boxko .host-btn,
+.welcome-modal .DeclineBtnBoxko .Decline button,
+.welcome-modal .hostingBtnBoxko .Confirm button,
+.welcome-modal .AcceptApplicationBtnko .accept button,
+.welcome-modal .myApplicationBtnBoxko .confirm button,
+.welcome-modal .comHostingBtnboxko .yes button,
+.reviewstar-popup .reviewRatingConBtnko .reviewSubmit {
+  width: 180px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 40px;
+  border: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: transparent !important;
+  color: #42B6E6 !important;
+  border-color: #42B6E6 !important;
+}
+
+.welcome-modal .modal-content .would-btn-box .host-btn,
+.welcome-modal .modal-content .canclehostingbtnbox .confirmHosting,
+.welcome-modal .join-btnbox .joinApply,
+.reviewstar-popup .reviewRatingConBtn .reviewSubmit,
+.welcome-modal .HostDeleteBtnBox .HostMyOwnDelete,
+.welcome-modal .canclePopupBtn .confirm button,
+.welcome-modal .DeclineBtnBox .Decline button,
+.welcome-modal .AcceptApplicationBtn .accept button,
+/* .welcome-modal .hostingBtnBox .Confirm button, */
+.welcome-modal .CancleHostingBtnBox .confirm button,
+.welcome-modal .comHostingBtnBox .yes button,
+.welcome-modal .myApplicationBtnBox .confirm button,
+.welcome-modal .comHostingBtnbox .yes button {
+  width: 180px;
+  height: 60px;
+  background: #42B6E6;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .hostingBtnBox .Confirm button {
+  width: 180px;
+  height: 60px;
+  background: #42B6E6;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px !important;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-title,
+.welcome-modal .welcome-join-modal .join-innner p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #404040;
+  padding-top: 40px !important;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-content,
+.welcome-modal .modal-content .would-host .would-host-inner .would-content1,
+.welcome-modal .modal-content .would-host .would-host-inner .would-content2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  color: #7E7E7E;
+  height: 80px;
+  line-height: 26.66px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-content1 {
+  height: 24px;
+  line-height: 24px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-content2 {
+  height: 60px;
+  line-height: 30px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-contentko,
+.welcome-modal .modal-content .would-host .would-host-inner .would-content1ko,
+.welcome-modal .modal-content .would-host .would-host-inner .would-content2ko {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 46px;
+  line-height: 23px;
+  color: #7E7E7E;
+  margin-bottom: 20px !important;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-content1ko {
+  height: 18px;
+  line-height: 18px;
+}
+
+.welcome-modal .modal-content .would-host .would-host-inner .would-content2ko {
+  margin-bottom: 0px !important;
+}
+
+.white-space {
+  white-space: nowrap;
+}
+
+.reviewstar-popup .review-body {
+  padding: 30px 40px 35.61px 40px;
+}
+
+.reviewstar-popup .review-body .reviewContent .ReviewDetails {
+  padding: 40px 0px 40px 0px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #404040;
+  font-family: 'Poppins';
+}
+
+.reviewstar-popup .reviewRating {
+  padding-bottom: 35.28px;
+}
+
+.reviewstar-popup .reviewRating .start-rat {
+  width: 48.1px;
+  height: 44.11px;
+}
+
+.reviewstar-popup .reviewTextareako textarea {
+  width: 100%;
+  padding: 30px 20px;
+  border: 1px solid #7E7E7E;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+  color: #7E7E7E;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #7E7E7E;
+  min-height: 200px;
+}
+
+.reviewstar-popup .reviewTextarea textarea {
+  width: 100%;
+  padding: 30px 20px;
+  border: 1px solid #7E7E7E;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+  color: #7E7E7E;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  min-height: 200px;
+  font-family: 'Poppins';
+}
+
+.reviewstar-popup .reviewTextarea textarea::placeholder,
+.reviewstar-popup .reviewTextareako textarea::placeholder {
+  color: #7E7E7E;
+}
+
+.welcome-modal .host-popup-header {
+  border-bottom: none;
+}
+
+.modal-header .close {
+  padding: 0 !important;
+}
+
+.welcome-modal .modal-content {
+  position: relative;
+}
+
+.welcome-modal .modal-content .host-popup-header button {
+  position: absolute;
+  top: 67.22px;
+  right: 52px;
+  z-index: 1;
+}
+
+.welcome-modal .modal-signup-title,
+.welcome-modal .modal-signup-titleko {
+  padding: 50px 40px 0px 40px;
+  text-align: center;
+}
+
+.welcome-modal .modal-signup-title h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.welcome-modal .modal-signup-titleko h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  height: 24px;
+  color: #1B1C1E;
+}
+
+.welcome-modal .host .HostProfileImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.welcome-modal .host {
+  padding: 33px 40px 0px 40px;
+}
+
+.welcome-modal .host .user-local-host .pro-name-suah .flag {
+  width: 29.69px;
+  height: 29.69px;
+}
+
+.welcome-modal .host .user-local-host .host-mainTag {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-modal .host .user-local-host .local-host-bg {
+  width: 112px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #8362E2;
+  border-radius: 133.333px;
+  text-align: center;
+  margin-right: 6px;
+  line-height: 24px;
+  padding-top: 2px;
+}
+
+.welcome-modal .host .user-local-host .travel-host-bg {
+  width: 112px;
+  height: 30px;
+  background: #FF5F5F;
+  border-radius: 133.333px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 6px;
+}
+
+.welcome-modal .host .user-local-host .host-mainTag .hots-gender {
+  width: 66px;
+  height: 30px;
+  border: 0.5px solid #404040;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  text-align: center;
+  margin-right: 6px;
+
+}
+
+.welcome-modal .host .user-local-host .pro-name-suah {
+  margin-bottom: 16px;
+}
+
+.welcome-modal .host .user-local-host .pro-name-suah .join-pro .msgicon {
+  margin-left: 0px;
+  width: 23.36px;
+  height: 26.35px;
+  margin-right: 18.97px;
+  border-radius: 0px;
+}
+
+
+
+.welcome-modal .host .user-local-host .pro-name-suah .join-pro .heart-div .favorite {
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.welcome-modal .host .user-local-host .pro-tag-name {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.welcome-modal .host .user-local-host .host-mainTag .hots-gender p,
+.welcome-modal .host .user-local-host .host-mainTag .hots-age p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #404040;
+  line-height: 24px;
+  margin-top: 2px;
+}
+
+.welcome-modal .host .user-local-host .host-mainTag .hots-age {
+  width: 50px;
+  height: 30px;
+  border: 0.5px solid #404040;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  text-align: center;
+}
+
+
+.welcome-modal .host .user-local-host .travel-host-bg .info {
+  margin-top: 3px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.welcome-modal .host .img-join-host .userName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.welcome-modal .host .user-local-host .custom-border {
+  margin-top: 30px;
+  background: #C9C9C9;
+  width: 380px;
+  height: 1px;
+}
+
+.welcome-modal .userImgContent .NewHostingtitle {
+  padding: 30px 40px 20px 40px;
+}
+
+.welcome-modal .userImgContent .NewHostingtitle p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1B1C1E;
+}
+
+
+.welcome-modal .userImgContent .host-profile-modal img {
+  width: 130px;
+  height: 120px;
+}
+
+.welcome-modal .userImgContent .mainProfile {
+  padding: 0px 40px 20px 40px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.welcome-modal .userImgContent .modalImageContent {
+  margin-left: 30px;
+  width: 100%;
+}
+
+.welcome-modal .userImgContent .modalImageContent h6 {
+  margin-bottom: 0px !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #404040;
+  line-height: 20px;
+  height: 20px;
+}
+
+.welcome-modal .userImgContent .modalImageContent h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #404040;
+  line-height: 20px;
+  margin-bottom: 10px !important;
+}
+
+.welcome-modal .userImgContent .modalImageContent h6 p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  color: #404040;
+}
+
+.welcome-modal .userImgContent .modalImageContent .modalcountryname {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7E7E7E;
+  margin-bottom: 10px !important;
+}
+
+.welcome-modal .userImgContent .modalImageContent .CountryReview {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  height: 18px;
+  line-height: 18px;
+  color: #7E7E7E;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px !important;
+}
+
+.welcome-modal .userImgContent .modalImageContent .CountryReview .onlyheart {
+  font-size: 14px;
+  margin-left: 13.62px;
+}
+
+.welcome-modal .userImgContent .modalImageContent .CountryReview .onlyheart img {
+  margin-right: 5.62px;
+}
+
+
+.welcome-modal .date-time .pax-font {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  line-height: 18px;
+  max-width: 106px;
+  width: 100%;
+  text-align: end;
+}
+
+.welcome-modal .date-time .pax-font .blue-font label {
+  color: #42B6E6;
+}
+
+.welcome-modal .date-time .date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7E7E7E;
+  max-width: 220px;
+  width: 100%;
+}
+
+.welcome-modal .EditDeleteContentBox .checkboxes {
+  position: relative;
+}
+
+.welcome-modal .EditDeleteContentBox .checkboxes .tremsCheckbox {
+  /* margin-right: 22px; */
+  opacity: 0;
+  display: none;
+}
+
+.welcome-modal .EditDeleteContentBox .checkboxes label {
+  padding-left: 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  height: 20px;
+  color: #7E7E7E;
+}
+
+.welcome-modal .editProfilebtn {
+  padding: 0px 40px 64px 40px;
+}
+
+.welcome-modal .editProfilebtn .delete .DeleteBtn {
+  width: 180px;
+  height: 60px;
+  border: 2px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 143.697px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #42B6E6;
+  background: transparent;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .editProfilebtn .delete .DisabledDelete {
+  width: 180px;
+  height: 60px;
+  border: 2px solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 143.697px;
+  background: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #E7E7E7;
+  cursor: pointer;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .editProfilebtn .cancle .CancleBtn {
+  width: 180px;
+  height: 60px;
+  background: #42B6E6;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .editProfilebtn .cancle .DisabledCancle {
+  width: 180px;
+  height: 60px;
+  background: #E7E7E7;
+  border-radius: 40px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: 'Roboto';
+}
+
+.welcome-modal .EditDeleteContentBox .editdeletetexten {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1B1C1E;
+  height: 58px;
+  line-height: 29px;
+}
+
+.welcome-modal .EditDeleteContentBox .editdeletetextko {
+  height: 24px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.welcome-modal .EditDeleteContentBox .checkboxes .CheckmarkSpan {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 0px;
+  border-radius: 50%;
+  background: #B7B7B7;
+  cursor: pointer;
+}
+
+.welcome-modal .EditDeleteContentBox .checkboxes input:checked~.CheckmarkSpan {
+  background-color: #42B6E6;
+}
+
+.welcome-modal .EditDeleteContentBox .checkboxes .CheckmarkSpan::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+
+/*  Modal CSS End  */
+
+
+
+
+/*  Header CSS Ravibhai  */
+.fixed-top-header {
+  width: 1100px;
+  position: absolute;
+  top: 35px;
+}
+
+.header-search-button-hero {
+  border: none !important;
+  background: #42B6E6 !important;
+  border-radius: 100px;
+  width: 56px;
+  height: 56px;
+  font-style: normal;
+  line-height: 56px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+}
+
+.header-search-bar {
+  max-width: 606px !important;
+  width: 100%;
+  margin-top: 0 !important;
+
+
+}
+
+.header-search-bar .find-city-location input {
+  width: 174px !important;
+}
+
+.header-search-bar .from-calender,
+.header-search-bar .to-calender {
+  width: 184px !important;
+}
+
+/* .header-search-bar .from-calender .react-datepicker__input-container input, .header-search-bar .to-calender .react-datepicker__input-container input{
+      width:64px !important;
+  } */
+
+.change-language .css-319lph-ValueContainer {
+  padding: 0 !important;
+  height: 100%;
+}
+
+.change-language .css-319lph-ValueContainer .css-qc6sy-singleValue {
+  transform: translateY(0%);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 16px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.change-language .css-6j8wv5-Input,
+.change-language .css-qc6sy-singleValue {
+  margin: 0 !important;
+  color: #fff !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 !important;
+  width: 60px !important;
+  text-align: center;
+}
+
+.change-language .css-tlfecz-indicatorContainer,
+.change-language .css-1hb7zxy-IndicatorsContainer {
+  display: none !important;
+}
+
+
+/*  Footer Chatbox CSS  */
+
+.Footer {
+  position: absolute;
+  bottom: 150px;
+  right: 406px;
+}
+
+.Footer button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
+
+.Footer button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+/* <========  hostitinerary modal CSS start  ========> */
+
+.tour-courses {
+  max-width: 1100px !important;
+  width: 100% !important;
+}
+
+.tour-courses #tour-course-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tour-courses #tour-course-title h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  color: #1B1C1E;
+}
+
+.tour-courses .modal-content {
+  padding: 45px;
+  border-radius: 20px;
+}
+
+.tour-courses .modal-content .top-serach-tour .modal-header {
+  padding-bottom: 20px !important;
+}
+
+.tour-courses .tour-courses-filter {
+  padding-top: 22px;
+}
+
+.tour-courses .tour-courses-filter-catagories {
+  padding: 20px 0px 30px 0px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.tour-courses .tour-courses-filter-catagories .Catagories,
+.tour-courses .tour-courses-filter .CountryTitle {
+  min-width: 110px;
+  width: 110px;
+}
+
+.tour-courses .tour-courses-filter .CountryTitle,
+.tour-courses .tour-courses-filter .Catagories,
+.tour-courses .tour-courses-filter-catagories {
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+}
+
+.tour-courses .tour-courses-filter-catagories .Catagories .catagory-span {
+  color: #42B6E6;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.tour-courses .tour-courses-filter .country-p {
+  background: #FFFFFF;
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 29px;
+  padding: 4px 10px 4px 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 28px;
+  color: #42B6E6;
+}
+
+.tour-courses .top-serach-tour .selectCategory .radio-btn {
+  margin-bottom: 10px;
+}
+
+.tour-courses .top-serach-tour .radio-btn {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tour-courses .top-serach-tour .radio-btn .radio-check {
+  padding: 7px 10px;
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #7E7E7E;
+  cursor: pointer;
+
+}
+
+.tour-courses .top-serach-tour .radio-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tour-courses .top-serach-tour .radio-btn input:checked~.radio-check {
+  background: #FFFFFF;
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 29px;
+  font-weight: 700;
+  color: #42B6E6;
+  cursor: pointer;
+}
+
+.tour-courses .top-serach-tour .tourSearchFilter {
+  padding: 50px 0px 30px 0px;
+}
+
+.tour-courses .top-serach-tour .tourSearchFilter input {
+  width: 870px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  padding: 16px 0px 16px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  outline: none;
+}
+
+.tour-courses .top-serach-tour .tourSearchFilter input::placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #7E7E7E;
+}
+
+.tour-courses .top-serach-tour .tourSearchFilter .search {
+  width: 110px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.tour-courses .filter-results-div .filter-result {
+  padding-bottom: 20px;
+}
+
+.tour-courses .filter-results-div h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  color: #1B1C1E;
+}
+
+.tour-courses .filter-results-div h3 .span-color-blue {
+  color: #42B6E6;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent {
+  width: 240px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper {
+  padding-bottom: 30px;
+}
+
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .modal-card-content {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .modal-card-content .card-details {
+  padding: 20px 20px 30px 20px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .modal-card-content .card-details h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 10px !important;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .modal-card-content .card-details h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  color: #7E7E7E;
+  margin-bottom: 20px !important;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .modal-card-content .card-details h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 10px !important;
+  color: #404040;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .modal-card-content .card-details h5:last-child {
+  margin-bottom: 0px !important;
+
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .checkboxes input {
+  position: absolute;
+  opacity: 0;
+  top: 22px;
+  right: 22px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .checkboxes input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 20px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .checkboxes input:checked~.CheckMark {
+  background-color: #42B6E6;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .checkboxes .CheckMark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  z-index: 1;
+  background: #313741;
+  cursor: pointer;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .tourCardContent .checkboxes .CheckMark::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 14px;
+  top: 4px;
+  left: 8px;
+  border: 1px solid #ffffff;
+  border-width: 0px 3px 3px 0px;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .modal-card {
+  margin-right: 13px;
+  margin-bottom: 20px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .modal-card.b-red {
+  border: 1px solid #42b6e6;
+  border-radius: 20px;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper .modal-card.b-trans {
+  border: 1px solid transparent;
+}
+
+.tour-courses .filter-results-div .modal-card-wrapper :nth-child(4n) {
+  margin-right: 0px;
+}
+
+
+.tour-courses .filter-results-div .pagination {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom {
+  width: 30px;
+  text-align: center;
+  line-height: 16px;
+  height: 16px;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom .page-link-custom {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #7E7E7E;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom a {
+  text-decoration: none;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom .activepage {
+  text-decoration: none;
+  color: #42B6E6;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom.active {
+  font-style: normal;
+  font-weight: 700;
+  color: #42B6E6;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom.disabled {
+  color: #C9C9C9;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom .svg-inline--fa {
+  color: #1B1C1E;
+}
+
+.tour-courses .filter-results-div .pagination .page-item-custom.disabled .svg-inline--fa {
+  color: #C9C9C9;
+  width: 12px;
+  height: 12px;
+}
+
+/* <========  hostitinerary modal CSS End  ========> */
+
+/* <========  WishList CSS Start  ========> */
+
+.mainWishListContainer .details {
+  padding-top: 155px;
+  padding-bottom: 80px;
+}
+
+.mainWishListContainer .details .details-header {
+  margin-bottom: 30px;
+}
+
+.mainWishListContainer .details .details-header h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 34px;
+  height: 34px;
+  color: #1B1C1E;
+}
+
+.mainWishListContainer .details .details-tabs {
+  padding-bottom: 30px;
+  /* border-bottom: 1px solid #C9C9C9; */
+}
+
+.mainWishListContainer .details .details-tabs span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  color: #1B1C1E;
+  cursor: pointer;
+}
+
+.mainWishListContainer .details .details-tabs .active {
+  color: #42B6E6;
+}
+
+
+
+.mainWishListContainer .details .whistlist-host {
+  padding: 30px 0px 30px 0px;
+  /* border-bottom: 1px solid #C9C9C9; */
+  border-top: 1px solid #C9C9C9;
+}
+
+.mainWishListContainer .details .img-join-host {
+  margin-bottom: 10px;
+}
+
+.details .img-join-host h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #1B1C1E;
+}
+
+.details .whistlist-host .mainWishUserContent {
+  margin-left: 16px;
+}
+
+.details .whistlist-host .whishlist-hostpro {
+  position: relative;
+}
+
+.details .whistlist-host .mainWishUserContent .travel-host-bg {
+  background: #FF5F5F;
+  border-radius: 133.333px;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  margin-right: 6px;
+}
+
+.details .whistlist-host .mainWishUserContent .local-host-bg {
+  background: #8362E2;
+  border-radius: 133.333px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  margin-right: 6px;
+}
+
+.details .whistlist-host .mainWishUserContent .wishHost {
+  border: 0.6px solid #1B1C1E;
+  box-sizing: border-box;
+  border-radius: 133.333px;
+  padding: 0px 10px;
+  margin-right: 6px;
+}
+
+.details .whistlist-host .mainWishUserContent .wishHost:last-child {
+  margin-right: 0px;
+}
+
+.details .whistlist-host .mainWishUserContent .wishHost p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #1B1C1E;
+  line-height: 24px;
+}
+
+.details .whistlist-host .mainWishUserContent .travel-host-bg p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.details .card-box {
+  width: 100%;
+  padding: 30px 20px 30px 40px;
+}
+
+.details .card-box .tour-card-data {
+  margin-bottom: 10px;
+}
+
+.details .card-box .tour-card-data a {
+  text-decoration: none !important;
+}
+
+.details .card-box .tour-card-data p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+}
+
+.details .card-box .tour-card-data p .blue-font {
+  color: #42b6e6;
+}
+
+.details .card-box .tour-card-data p .green-font {
+  color: #41c82c !important;
+}
+
+.details .card-box .tour-card-data a h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  height: 24px;
+  line-height: 24px;
+  color: #1B1C1E;
+}
+
+.details .card-box .location-row {
+  margin-bottom: 12px;
+}
+
+
+.details .card-box .location-row p,
+.details .card-box .star-row .star-reviews p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  color: #7E7E7E;
+}
+
+.details .card-box .star-row .star-list {
+  height: 20px;
+  line-height: 20px;
+}
+
+.details .card-box .star-row .star-reviews {
+  margin-left: 8px;
+}
+
+.mainWishListContainer .single-card-tour .canceled-tour-card,
+.AppliedHostingMain .single-card-tour .canceled-tour-card,
+.my-account-feeds .single-card-tour .canceled-tour-card {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: 10;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainWishListContainer .single-card-tour .canceled-tour-card h1,
+.AppliedHostingMain .single-card-tour .canceled-tour-card h1,
+.my-account-feeds .single-card-tour .canceled-tour-card h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 19px;
+  line-height: 19px;
+  color: #1B1C1E;
+  margin-bottom: 21px !important;
+}
+
+.mainWishListContainer .single-card-tour .canceled-tour-card button,
+.AppliedHostingMain .single-card-tour .canceled-tour-card button,
+.my-account-feeds .single-card-tour .canceled-tour-card button {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #42B6E6;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #42B6E6;
+  background: transparent;
+}
+
+/* <========  WishList CSS End  ========> */
+
+
+/* <========  EditProfile CSS  Start  ========> */
+
+.my-account-feeds .details {
+  padding-top: 50px;
+  cursor: pointer;
+}
+
+.my-account-feeds {
+  padding-bottom: 80px;
+}
+
+.edit-profile-page {
+  padding-top: 155px;
+  padding-bottom: 80px;
+}
+
+.edit-profile-page .myAcc {
+  padding-bottom: 30px;
+}
+
+.my-account-feeds .details-header {
+  margin-bottom: 20px;
+}
+
+.my-account-feeds .details-header h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 18px;
+  line-height: 18px;
+
+}
+
+.my-account-feeds .details-tabs span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+}
+
+.my-account-feeds .details-tabs a {
+  text-decoration: none !important;
+
+}
+
+.my-account-feeds .single-card-tour {
+  margin-top: 30px;
+}
+
+.my-account-feeds .details-tabs a h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  color: #42B6E6;
+}
+
+.my-account-feeds .details-tabs .active {
+  color: #42B6E6;
+}
+
+.edit-profile-page .myAcc h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #1B1C1E;
+  height: 34px;
+  line-height: 34px;
+}
+
+.edit-profile-page .AccProfile h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  color: #1B1C1E;
+}
+
+.edit-profile-page .AccProfile {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.edit-profile-page .profile-card {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.edit-profile-page .profile-card .EditProfileTitle {
+  margin-left: 30px;
+}
+
+.edit-profile-page .profile-card .EditProfileTitle h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  margin-bottom: 10px !important;
+}
+
+.edit-profile-page .profile-card .EditProfileTitle .edit-profile-link a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #42B6E6;
+  text-decoration: none !important;
+}
+
+.edit-profile-page .profile-pic {
+  padding: 30px 0px 30px 0px;
+}
+
+.edit-profile-page .profile-pic .customInput {
+  display: none;
+}
+
+.edit-profile-page .profile-pic .ChooseBtn {
+  width: 40px;
+  height: 40px;
+  background-color: #42B6E6;
+  border-radius: 50%;
+  padding: 4px 8px;
+  position: absolute;
+  top: 100px;
+  left: 70px;
+  cursor: pointer;
+}
+
+.edit-profile-page .proname-class h6,
+.edit-profile-page .pronationally h6,
+.edit-profile-page .prodob h6,
+.edit-profile-page .procpass h6 {
+  width: 110px;
+  height: 18px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1B1C1E;
+}
+
+.edit-profile-page .procpass {
+  margin-right: 30px;
+}
+
+.edit-profile-page .usernameInputContent {
+  margin-bottom: 20px;
+}
+
+.edit-profile-page .profile-page-label .UserName,
+.edit-profile-page .profile-page-label .userEmali,
+.edit-profile-page .profile-page-label .mainUserName,
+.edit-profile-page .profile-page-label .userPassword,
+.edit-profile-page .profile-page-label .NationalityInput,
+.edit-profile-page .profile-page-label .EditDate,
+.edit-profile-page .profile-page-label .userGender,
+.edit-profile-page .profile-page-label .c-pass-input {
+  width: 400px;
+  height: 50px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  outline: none;
+  padding: 16px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E !important;
+  font-family: 'Poppins';
+}
+
+.edit-profile-page .profile-page-label .c-pass-input {
+  width: 270px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.edit-profile-page .profile-page-label .c-pass-button {
+  width: 120px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 5px;
+  border: none !important;
+  outline: none !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.edit-profile-page .verify-code {
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+}
+
+.edit-profile-page .verify-code .text,
+.edit-profile-page .profile-page-label .text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  height: 14px;
+  line-height: 14px;
+  font-family: 'Poppins';
+}
+
+.edit-profile-page .verify-code .verificationInput {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  outline: none;
+  padding: 16px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  font-family: 'Poppins';
+}
+
+.edit-profile-page .mobile-wrapper .userMobileNum {
+  width: 230px;
+  height: 50px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  outline: none;
+  padding: 16px 20px;
+  margin-left: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+}
+
+.edit-profile-page .mobile-wrapper {
+  position: relative;
+}
+
+.edit-profile-page .mobile-wrapper .c-pass-button,
+.edit-profile-page .mobile-wrapper .verify-btn {
+  position: absolute;
+  width: 95px;
+  height: 38px;
+  background: #42B6E6;
+  border-radius: 25px;
+  border: none !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  outline: none !important;
+  top: 6px;
+  right: 6px;
+  color: #FFFFFF;
+}
+
+
+
+.edit-profile-page .e-profile-otp-countdown {
+  position: absolute;
+  top: 15px;
+  right: 21px;
+  height: 20px;
+  line-height: 20px;
+
+}
+
+.edit-profile-page .e-profile-otp-countdown p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #42B6E6;
+}
+
+.edit-profile-page .edit-number .contry-code-profile .css-1s2u09g-control,
+.edit-profile-page .edit-number .contry-code-profile .css-1pahdxg-control {
+  min-width: 160px;
+  width: 100%;
+  height: 50px;
+  padding: 0px 10px 0px 20px;
+}
+
+.edit-profile-page .edit-number .contry-code-profile .css-1s2u09g-control .css-319lph-ValueContainer,
+.edit-profile-page .edit-number .contry-code-profile .css-1pahdxg-control .css-319lph-ValueContainer {
+  padding: 0px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.edit-profile-page .edit-number .contry-code-profile .css-1s2u09g-control .css-319lph-ValueContainer .css-qc6sy-singleValue,
+.edit-profile-page .edit-number .contry-code-profile .css-1pahdxg-control .css-319lph-ValueContainer .css-qc6sy-singleValue {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  margin: 0px;
+  width: 130px;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+.edit-profile-page .edit-number .contry-code-profile .css-1s2u09g-control .css-1hb7zxy-IndicatorsContainer,
+.edit-profile-page .edit-number .contry-code-profile .css-1pahdxg-control .css-1hb7zxy-IndicatorsContainer {
+  display: none;
+}
+
+.edit-profile-page .edit-number .contry-code-profile .css-1s2u09g-control .css-6j8wv5-Input,
+.edit-profile-page .edit-number .contry-code-profile .css-1pahdxg-control .css-6j8wv5-Input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.edit-profile-page .edit-number .contry-code-profil .css-1okebmr-indicatorSeparator {
+  display: none;
+}
+
+.edit-profile-page .delete-profile {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.edit-profile-page .delete-profile .nav-link {
+  padding: 0px !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  color: #1B1C1E;
+  text-decoration-line: underline;
+}
+
+.edit-profile-page .save-btn {
+  margin-top: 40px;
+}
+
+.edit-profile-page .save-btn button,
+.cnotice-single-page .CustomerService-title2 .detail-button button {
+  width: 300px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none;
+}
+
+/* <========  EditProfile CSS  End  ========> */
+
+/* <========  Inquirt CSS Start  ========> */
+
+.InquirtMainTitle {
+  padding-top: 155px;
+  padding-bottom: 50px;
+}
+
+.InquirtMainTitle .myAcc h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  height: 34px;
+  line-height: 34px;
+  color: #1B1C1E;
+}
+
+.image-inquiry {
+  background-image: url(./img/inquritbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 810px;
+}
+
+.image-inquiry .koMainContent {
+  padding-bottom: 40px;
+}
+
+.image-inquiry .pt-134 {
+  padding-top: 60px;
+}
+
+.image-inquiry .mt-74 {
+  padding-top: 30px;
+}
+
+.image-inquiry .pt-134 .font-34-bold,
+.image-inquiry .mt-74 .font-34-bold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  height: 28px;
+  line-height: 28px;
+  margin-bottom: 10px !important;
+}
+
+.image-inquiry .koMainContent p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 30px;
+}
+
+.image-inquiry .pt-134 .font-24-normal,
+.image-inquiry .mt-74 .font-24-normal {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+}
+
+.image-inquiry .set-font-size {
+  margin-bottom: 20px;
+}
+
+.image-inquiry .secFontSize {
+  margin-bottom: 40px;
+}
+
+.image-inquiry .iquirtBtn button {
+  width: 300px;
+  height: 50px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 116.807px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: transparent;
+}
+
+.image-inquiry .set-font-size p,
+.image-inquiry .secFontSize p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26.668px;
+}
+
+/* <========  Inquirt CSS End  ========> */
+
+
+/* <========  Customer Service Page CSS start ========> */
+
+.cnotice-page .CustomerService-title {
+  padding-top: 155px;
+}
+
+.cnotice-page .CustomerService-title .ServiceTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  height: 34px;
+  line-height: 34px;
+  color: #1B1C1E;
+  margin-bottom: 30px !important;
+}
+
+.cnotice-page .CustomerService-title .grid a {
+  width: 50%;
+  text-decoration: none !important;
+  padding: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1B1C1E;
+}
+
+.cnotice-page .CustomerService-title .grid {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #DFDFDF;
+}
+
+.cnotice-page .CustomerService-title .nav-tabs .nav-link {
+  border: none;
+  height: 20px;
+  line-height: 20px;
+}
+
+.cnotice-page .CustomerService-title .nav-tabs .nav-link.active {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #009DDE;
+  position: relative;
+}
+
+.cnotice-page .CustomerService-title .nav-tabs .nav-link.active::after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #009DDE;
+  left: 0px;
+  top: 40px;
+}
+
+.cnotice-page .CustomerService-title .tab-content {
+  margin-top: 30px;
+}
+
+.cnotice-page .CustomerService-title .tab-content .input {
+  margin-bottom: 50px;
+}
+
+.cnotice-page .CustomerService-title .tab-content .input input {
+  width: 956px;
+  height: 50px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  padding: 16px 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7E7E7E;
+  margin-right: 20px;
+  outline: none;
+
+}
+
+.cnotice-page .CustomerService-title .tab-content .input button {
+  width: 126px;
+  height: 50px;
+  background: #42B6E6;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cnotice-page .CustomerService-title .tab-content .input button img {
+  margin-right: 10px;
+}
+
+.cnotice-page .CustomerService-title .tab-content .total-items {
+  padding-bottom: 30px;
+}
+
+.cnotice-page .CustomerService-title .tab-content .total-items h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  color: #1B1C1E;
+}
+
+.cnotice-page .CustomerService-title .tab-content table {
+  width: 100%;
+  border-bottom: 1px solid #1B1C1E;
+  border-top: 1px solid #1B1C1E;
+}
+
+.CustomerService-title .tab-content table tr th,
+.cnotice-page .CustomerService-title .tab-content table tr td {
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.CustomerService-title .tab-content table tr th {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 0px 14px 0px;
+}
+
+
+.cnotice-page .CustomerService-title .tab-content table tr td {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+  padding: 14px 0px 14px 0px;
+  cursor: pointer;
+}
+
+.cnotice-page .CustomerService-title .tab-content table tr th:nth-child(1),
+.cnotice-page .CustomerService-title .tab-content table tr td:nth-child(1) {
+  width: 100px;
+}
+
+.cnotice-page .CustomerService-title .tab-content table tr th:nth-child(2),
+.cnotice-page .CustomerService-title .tab-content table tr td:nth-child(2) {
+  min-width: 700px;
+  width: 700px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cnotice-page .CustomerService-title .tab-content table tr th:nth-child(3),
+.cnotice-page .CustomerService-title .tab-content table tr td:nth-child(3) {
+  width: 200px;
+}
+
+.cnotice-page .CustomerService-title .tab-content table tr th:nth-child(4),
+.cnotice-page .CustomerService-title .tab-content table tr td:nth-child(4) {
+  width: 100px;
+}
+
+.cnotice-page .CustomerService-title .pagination-notice {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.cnotice-page .CustomerService-title .pagination {
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.cnotice-page .pagination-notice .disabled,
+.cnotice-page .pagination-notice .active {
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+
+}
+
+.cnotice-page .pagination-notice .active {
+  background-color: #42B6E6;
+}
+
+.cnotice-page .pagination-notice .page-item-custom {
+  width: 40px;
+  line-height: 36px;
+  text-align: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.cnotice-page .pagination-notice .page-item-custom a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-decoration: none;
+  color: #7E7E7E;
+}
+
+
+.cnotice-page .pagination-notice .disabled a {
+  height: 40px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7E7E7E;
+}
+
+.cnotice-page .pagination-notice .active a {
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.cnotice-single-page .CustomerService-title2 .detail-title {
+  padding: 20px 20px 21px 20px;
+  border-top: 1px solid #1B1C1E;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.cnotice-single-page .CustomerService-title2 .detail-title h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1C1E;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 10px !important;
+}
+
+.cnotice-single-page .CustomerService-title2 .detail-title p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  color: #7E7E7E;
+}
+
+.cnotice-single-page .CustomerService-title2 .detail-text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.cnotice-single-page .CustomerService-title2 .detail-text {
+  padding: 30px 20px 197px 20px;
+  border-bottom: 1px solid #1B1C1E;
+}
+
+.cnotice-single-page .CustomerService-title2 .detail-button {
+  text-align: center;
+  padding: 31px 0px 60px 0px;
+}
+
+
+/* <========  Customer Service Page CSS End ========> */
+
+
+
+/* <========  Faq Css Start  ========> */
+
+.faq-table .card-header {
+  background: transparent;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+}
+
+.faq-table .card {
+  border: none;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.accordion-card .card-img .Q-round {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  background: #42B6E6;
+  margin-right: 67px;
+}
+
+.accordion-card .card-img .Q-round span {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.accordion-card .card-img p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.faq-table .collapse .faq-body {
+  padding: 16px 113px 16px 113px;
+  background: #FAFAFA;
+  border-top: 1px solid #DEDEDE;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1C1E;
+}
+
+.tab-content .faq-table {
+  border-top: 1px solid #1B1C1E;
+  border-bottom: 1px solid #1B1C1E;
+}
+
+/* <========  Faq Css End  ========> */
+
+/*  <======== appliedHosting  ========>  */
+
+.AppliedHostingMain {
+  padding-top: 155px;
+  padding-bottom: 80px;
+}
+
+.AppliedHostingMain .details-header {
+  padding-bottom: 30px;
+}
+
+.AppliedHostingMain .details-header h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  height: 34px;
+  line-height: 34px;
+}
+
+.AppliedHostingMain .single-card-tour {
+  margin-top: 30px;
+}
+
+.AppliedHostingMain .details-tabs .active {
+  color: #42B6E6;
+}
+
+.AppliedHostingMain .details-tabs span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.point {
+  margin-top: -6px;
+}
+
+.countdown-err {
+  color: red;
+  /* padding-top: 23px;
+  font-size: 15px; */
+}
+
+/*  Media screen  */
+
+@media (max-width:1280px) {
+  .Footer {
+    right: 7%;
+  }
+}
+
+.otp-countdown-error {
+  font-size: 12px;
+  padding-left: 30px;
+  padding-top: 20px;
+  line-height: 14px;
+}
+
+.bg-home-page {
+  background: #fafafa;
+}
